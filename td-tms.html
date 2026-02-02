@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Travaux Dirigés TMS | Plateforme TMS</title>
+<link href="css/style.css" rel="stylesheet"/>
+
+  <style>
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;z-index:9999;padding:.6rem 1rem;background:#fff;color:#000;border-radius:.5rem;box-shadow:0 4px 18px rgba(0,0,0,.25);}
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+<header class="header-modern">
+<div class="header-content">
+<div class="logos-header">
+<img alt="RF" src="images/logo-republique.png"/>
+<img alt="FORPRO PACA" src="images/logoFORPROPaca.png"/>
+</div>
+<div class="header-title">
+<h1>Travaux Dirigés</h1>
+<p class="subtitle">Exercices pratiques TMS</p>
+</div>
+</div>
+</header>
+<nav class="nav-bar">
+<div class="nav-pills-content">
+<a class="nav-pill" href="index.html">🏠 Accueil</a>
+<a class="nav-pill" href="cours/index-cours.html">📖 Cours</a>
+<a class="nav-pill" href="calculateur-criticite.html">📊 Calculateur</a>
+</div>
+</nav>
+<main class="container" id="main">
+<div class="content-bloc">
+<p>Ces exercices vous permettent de mettre en pratique les connaissances acquises dans le cours.</p>
+</div>
+<!-- TD 1 -->
+<section class="content-bloc">
+<div class="card-header">
+<h2 class="card-title">📋 TD 1 — Auto-diagnostic des facteurs de risque</h2>
+</div>
+<p><strong>Objectif :</strong> Identifier les facteurs de risque TMS auxquels vous êtes exposé dans votre activité.</p>
+<h3 class="section-subtitle">Checklist des facteurs de risque</h3>
+<div class="table-container">
+<table>
+<thead><tr><th>Facteur</th><th style="width:80px">Oui</th><th style="width:80px">Non</th></tr></thead>
+<tbody>
+<tr><td>Je réalise des gestes répétitifs (&gt;2h/jour)</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+<tr><td>Je porte des charges lourdes (&gt;10 kg)</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+<tr><td>Je travaille en posture contraignante (penché, bras en l'air)</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+<tr><td>Je reste en position statique prolongée</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+<tr><td>J'utilise des outils vibrants</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+<tr><td>Mon rythme de travail est imposé</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+<tr><td>Je travaille sous pression / stress</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+<tr><td>Je suis exposé au froid ou à la chaleur</td><td><input type="checkbox"/></td><td><input type="checkbox"/></td></tr>
+</tbody>
+</table>
+</div>
+<div class="note-metier">
+<strong>Analyse :</strong> Plus vous avez coché "Oui", plus votre exposition aux risques TMS est importante. 
+                Identifiez les 2-3 facteurs prioritaires à traiter.
+            </div>
+</section>
+<!-- TD 2 -->
+<section class="content-bloc">
+<div class="card-header">
+<h2 class="card-title">📝 TD 2 — Analyse d'une situation de travail</h2>
+</div>
+<p><strong>Objectif :</strong> Appliquer la méthode EVRP en 5 étapes sur une situation réelle ou fictive.</p>
+<h3 class="section-subtitle">Grille d'analyse EVRP</h3>
+<div class="table-container">
+<table>
+<thead><tr><th>Étape</th><th>Contenu</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Situation de travail</strong></td><td><textarea placeholder="Décrivez le poste, les tâches, l'environnement..." style="width:100%;height:60px"></textarea></td></tr>
+<tr><td><strong>2. Dangers identifiés</strong></td><td><textarea placeholder="Listez les dangers présents..." style="width:100%;height:60px"></textarea></td></tr>
+<tr><td><strong>3. Cotation G×P</strong></td><td>G = <select><option>1</option><option>2</option><option>3</option><option>4</option></select> × P = <select><option>1</option><option>2</option><option>3</option><option>4</option></select> = C : <strong id="criticite">_</strong></td></tr>
+<tr><td><strong>4. Mesures proposées</strong></td><td><textarea placeholder="Actions de prévention à mettre en place..." style="width:100%;height:60px"></textarea></td></tr>
+<tr><td><strong>5. Suivi</strong></td><td><textarea placeholder="Responsable, délai, indicateur..." style="width:100%;height:40px"></textarea></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-info">
+<strong>💡 Rappel :</strong> Utilisez le <a href="calculateur-criticite.html">calculateur de criticité</a> pour valider votre cotation.
+            </div>
+</section>
+<!-- TD 3 -->
+<section class="content-bloc">
+<div class="card-header">
+<h2 class="card-title">🎯 TD 3 — Étude de cas métier</h2>
+</div>
+<p><strong>Consigne :</strong> Choisissez un cas et répondez aux questions.</p>
+<div class="grid-2">
+<div class="content-bloc" style="background:#fff8e1">
+<h4>🍳 Cas Restauration</h4>
+<p>Un commis de cuisine réceptionne 50 colis/jour (5-15 kg), travaille debout 8h, réalise 200 découpes/service.</p>
+<ol>
+<li>Quels TMS risque-t-il de développer ?</li>
+<li>Identifiez 3 facteurs de risque principaux.</li>
+<li>Proposez 3 mesures de prévention.</li>
+</ol>
+</div>
+<div class="content-bloc" style="background:#e8f5e9">
+<h4>🧹 Cas Propreté</h4>
+<p>Un agent d'entretien nettoie 2000 m²/jour, utilise balai et serpillière classiques, travaille souvent penché.</p>
+<ol>
+<li>Quels TMS risque-t-il de développer ?</li>
+<li>Identifiez 3 facteurs de risque principaux.</li>
+<li>Proposez 3 mesures de prévention.</li>
+</ol>
+</div>
+</div>
+<details style="margin-top:1rem">
+<summary style="cursor:pointer;color:var(--bleu-gip);font-weight:600">📖 Voir les éléments de réponse</summary>
+<div class="alert alert-success" style="margin-top:1rem">
+<strong>Restauration :</strong> Lombalgies, canal carpien, tendinites épaule. Facteurs : port de charges, gestes répétitifs, station debout. Mesures : chariot de réception, couteaux ergonomiques, tapis anti-fatigue.<br/><br/>
+<strong>Propreté :</strong> Lombalgies, douleurs épaules. Facteurs : postures penchées, gestes répétitifs, pas d'aide technique. Mesures : balais télescopiques, chariot ergonomique, rotation des tâches.
+                </div>
+</details>
+</section>
+<!-- TD 4 -->
+<section class="content-bloc">
+<div class="card-header">
+<h2 class="card-title">📊 TD 4 — Élaboration d'un plan d'actions</h2>
+</div>
+<p><strong>Objectif :</strong> Formaliser des mesures de prévention dans un plan d'actions structuré.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Risque identifié</th>
+<th>Mesure</th>
+<th>Responsable</th>
+<th>Délai</th>
+<th>Coût estimé</th>
+<th>Indicateur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input type="date"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+</tr>
+<tr>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input type="date"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+</tr>
+<tr>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input type="date"/></td>
+<td><input style="width:100%" type="text"/></td>
+<td><input style="width:100%" type="text"/></td>
+</tr>
+</tbody>
+</table>
+</div>
+<button class="btn btn-secondary" onclick="window.print()">🖨 Imprimer</button>
+</section>
+<!-- TD 5 - EXERCICES DE MORPHOLOGIE -->
+<section class="content-bloc">
+<div class="card-header">
+<h2 class="card-title">📏 TD 5 — Exercices de morphologie (mesures de segments)</h2>
+</div>
+<p><strong>Objectif :</strong> Comprendre la répartition des forces et des mouvements dans le corps pour optimiser les gestes professionnels.</p>
+<p><strong>Matériel :</strong> Ruban à mesurer</p>
+<h3 class="section-subtitle">Tableau de mesures morphologiques</h3>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Caractéristique</th>
+<th>Mesure (cm)</th>
+<th>Proportion/Comparaison</th>
+<th>Conclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Longueur jambes</strong><br/><small>(hanche → cheville)</small></td>
+<td><input placeholder="cm" style="width:80px" type="number"/></td>
+<td>Par rapport à taille totale : <input placeholder="%" style="width:80px" type="text"/></td>
+<td><select><option>—</option><option>Longues</option><option>Moyennes</option><option>Courtes</option></select></td>
+</tr>
+<tr>
+<td><strong>Longueur bras</strong><br/><small>(épaule → bout doigts)</small></td>
+<td><input placeholder="cm" style="width:80px" type="number"/></td>
+<td>Par rapport à taille totale : <input placeholder="%" style="width:80px" type="text"/></td>
+<td><select><option>—</option><option>Longs</option><option>Moyens</option><option>Courts</option></select></td>
+</tr>
+<tr>
+<td><strong>Longueur buste</strong><br/><small>(clavicule → nombril)</small></td>
+<td><input placeholder="cm" style="width:80px" type="number"/></td>
+<td>Par rapport à taille totale : <input placeholder="%" style="width:80px" type="text"/></td>
+<td><select><option>—</option><option>Long</option><option>Moyen</option><option>Court</option></select></td>
+</tr>
+<tr>
+<td><strong>Longueur tronc</strong><br/><small>(clavicule → bassin)</small></td>
+<td><input placeholder="cm" style="width:80px" type="number"/></td>
+<td>Par rapport à taille totale : <input placeholder="%" style="width:80px" type="text"/></td>
+<td><select><option>—</option><option>Long</option><option>Moyen</option><option>Court</option></select></td>
+</tr>
+<tr>
+<td><strong>Cage thoracique (circ.)</strong><br/><small>(côtes inférieures)</small></td>
+<td><input placeholder="cm" style="width:80px" type="number"/></td>
+<td>Par rapport aux valeurs de référence</td>
+<td><select><option>—</option><option>Épaisse</option><option>Moyenne</option><option>Fine</option></select></td>
+</tr>
+<tr>
+<td><strong>Cage thoracique (larg.)</strong><br/><small>(aisselle à aisselle)</small></td>
+<td><input placeholder="cm" style="width:80px" type="number"/></td>
+<td>Par rapport aux valeurs de référence</td>
+<td><select><option>—</option><option>Large</option><option>Moyenne</option><option>Étroite</option></select></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-info">
+<strong>💡 À quoi ça sert ?</strong> Ces mesures permettent d'adapter les postes de travail à VOTRE morphologie : 
+                hauteur de plan de travail, longueur des manches d'outils, position des équipements...
+            </div>
+</section>
+<!-- TD 6 - EXERCICES DE LEVIERS -->
+<section class="content-bloc">
+<div class="card-header">
+<h2 class="card-title">⚖ TD 6 — Exercices de leviers corporels</h2>
+</div>
+<p><strong>Objectif :</strong> Comprendre comment la position du point d'appui affecte la force nécessaire pour soulever un poids.</p>
+<h3 class="section-subtitle">Exercice 1 : Levier de première classe</h3>
+<div class="grid-2">
+<div>
+<p><strong>Matériel :</strong> Bâton ou barre, poids léger</p>
+<p><strong>Instructions :</strong></p>
+<ol>
+<li>Placez un poids à une extrémité du bâton</li>
+<li>Essayez de soulever le poids en utilisant différents points d'appui</li>
+<li>Notez la force nécessaire selon la position du point d'appui</li>
+</ol>
+</div>
+<div class="alert alert-success" style="margin:0">
+<strong>🎯 Application cuisine :</strong> Ajuster les mouvements de levage des casseroles et marmites.
+                </div>
+</div>
+<h3 class="section-subtitle">Exercice 2 : Manipulation et transfert d'ustensiles</h3>
+<div class="grid-2">
+<div>
+<p><strong>Matériel :</strong> Ustensiles de cuisine, casseroles, poêles</p>
+<p><strong>Instructions :</strong></p>
+<ol>
+<li>Utilisez les techniques de levier pour déplacer les ustensiles lourds</li>
+<li>Notez les points d'appui et les segments corporels utilisés</li>
+<li>Pratiquez en minimisant l'effort et maximisant la sécurité</li>
+</ol>
+</div>
+<div class="alert alert-warning" style="margin:0">
+<strong>⚠ Sécurité :</strong> Utilisez des poids légers et assurez-vous que le matériel est stable. 
+                    Effectuez les mouvements lentement et sans forcer.
+                </div>
+</div>
+</section>
+<!-- TD 7 - MUSCLES LONGS ET COURTS -->
+<section class="content-bloc">
+<div class="card-header">
+<h2 class="card-title">💪 TD 7 — Identification des muscles longs et courts</h2>
+</div>
+<p><strong>Objectif :</strong> Reconnaître les muscles longs et courts et comprendre leurs fonctions pour éviter les blessures.</p>
+<div class="grid-2">
+<div class="content-bloc" style="background:#e3f2fd">
+<h4>Muscles LONGS</h4>
+<p><strong>Exemple :</strong> Biceps brachial</p>
+<p><strong>Fonction :</strong> Mouvements de grande amplitude</p>
+<p><strong>Exercice :</strong> Comparez la longueur de vos biceps en flexion et en extension. 
+                    Les muscles longs auront une différence de longueur plus marquée.</p>
+<p><strong>Application :</strong> Ajuster les mouvements de levage</p>
+</div>
+<div class="content-bloc" style="background:#fff3e0">
+<h4>Muscles COURTS</h4>
+<p><strong>Exemple :</strong> Muscles de la main</p>
+<p><strong>Fonction :</strong> Mouvements précis, faible amplitude</p>
+<p><strong>Exercice :</strong> Comparez la longueur des muscles de la main en flexion et en extension. 
+                    La différence sera moins marquée.</p>
+<p><strong>Application :</strong> Améliorer la précision des gestes (découpe)</p>
+</div>
+</div>
+<div class="alert alert-danger">
+<strong>⚠ Rappel sécurité :</strong> Effectuez tous les mouvements lentement et sans forcer. 
+                Arrêtez immédiatement en cas de douleur.
+            </div>
+</section>
+</main>
+<footer class="footer-modern">
+<div class="footer-content">
+<div class="footer-nav">
+<a href="cours/index-cours.html">📖 Cours</a>
+<a href="questionnaire-tms.html">✅ Quiz</a>
+</div>
+<p class="footer-credit">© 2025 — <strong>Benoît Deflandre</strong> — GRETA GIP FIPAN</p>
+</div>
+</footer>
+<button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</body>
+</html>

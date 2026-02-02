@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Livret Stagiaire — Ergonomie et Prévention des TMS — Version imprimable V5</title>
+<style>
+
+/* ===== VARIABLES CSS ===== */
+:root {
+  /* Couleurs institutionnelles */
+  --bleu-institutionnel: #005a8c;
+  --vert-greta: #00a99d;
+  --jaune-accent: #f9b000;
+  
+  /* Neutrales */
+  --gris-50: #f8fafb;
+  --gris-100: #f1f5f9;
+  --gris-200: #e2e8f0;
+  --gris-300: #cbd5e1;
+  --gris-500: #64748b;
+  --gris-700: #334155;
+  --gris-800: #1e293b;
+  
+  /* Sémantiques */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  
+  /* Typographie */
+  --font-base: "Marianne", system-ui, -apple-system, sans-serif;
+  
+  /* Espacements */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  
+  /* Effets */
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gris-800);
+  background: var(--gris-50);
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: white;
+  border-bottom: 3px solid var(--bleu-institutionnel);
+  padding: var(--space-lg) 0;
+  margin-bottom: var(--space-xl);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.logos {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.title-area {
+  flex: 1;
+  min-width: 300px;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bleu-institutionnel);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--gris-500);
+  margin-bottom: var(--space-md);
+}
+
+.meta-info {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--gris-500);
+}
+
+.badge {
+  background: var(--gris-100);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-bar {
+  background: white;
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--space-xl);
+  position: sticky;
+  top: var(--space-md);
+  z-index: 100;
+}
+
+.nav-controls {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 2px solid var(--gris-200);
+  border-radius: var(--radius);
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--bleu-institutionnel);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--bleu-institutionnel);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #004070;
+}
+
+.btn-secondary {
+  background: var(--vert-greta);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #008c82;
+}
+
+.btn-outline {
+  background: white;
+  border: 2px solid var(--gris-300);
+  color: var(--gris-700);
+}
+
+.btn-outline:hover {
+  background: var(--gris-50);
+  border-color: var(--gris-500);
+}
+
+/* ===== SOMMAIRE ===== */
+.sommaire {
+  background: white;
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--space-xl);
+}
+
+.sommaire h2 {
+  color: var(--bleu-institutionnel);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--gris-200);
+}
+
+.sommaire-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.sommaire-item {
+  padding: var(--space-md);
+  background: var(--gris-50);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--bleu-institutionnel);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sommaire-item:hover {
+  background: white;
+  box-shadow: var(--shadow);
+  transform: translateX(4px);
+}
+
+.sommaire-item h3 {
+  color: var(--bleu-institutionnel);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.sommaire-item p {
+  font-size: 0.9rem;
+  color: var(--gris-500);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  background: white;
+  padding: var(--space-xl);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--space-xl);
+}
+
+.section-header {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 3px solid var(--bleu-institutionnel);
+}
+
+.section-number {
+  display: inline-block;
+  background: var(--bleu-institutionnel);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+  margin-right: var(--space-sm);
+}
+
+.section-title {
+  display: inline;
+  font-size: 1.8rem;
+  color: var(--bleu-institutionnel);
+  font-weight: 700;
+}
+
+.section h3 {
+  color: var(--vert-greta);
+  font-size: 1.3rem;
+  margin: var(--space-lg) 0 var(--space-md);
+  font-weight: 700;
+}
+
+.section h4 {
+  color: var(--gris-700);
+  font-size: 1.1rem;
+  margin: var(--space-md) 0 var(--space-sm);
+  font-weight: 600;
+}
+
+.section p {
+  margin-bottom: var(--space-md);
+  text-align: justify;
+}
+
+.section ul, .section ol {
+  margin: var(--space-md) 0;
+  padding-left: var(--space-xl);
+}
+
+.section li {
+  margin-bottom: var(--space-sm);
+}
+
+/* ===== ENCADRÉS ===== */
+.info-box {
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  margin: var(--space-lg) 0;
+  border-left: 4px solid;
+}
+
+.info-box.important {
+  background: #fef2f2;
+  border-color: var(--danger);
+}
+
+.info-box.warning {
+  background: #fef3c7;
+  border-color: var(--warning);
+}
+
+.info-box.success {
+  background: #d1fae5;
+  border-color: var(--success);
+}
+
+.info-box.info {
+  background: #dbeafe;
+  border-color: var(--bleu-institutionnel);
+}
+
+.info-box strong {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+}
+
+/* ===== STATISTIQUES ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, var(--bleu-institutionnel), #004070);
+  color: white;
+  border-radius: var(--radius);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ===== SCHÉMAS ANATOMIQUES ===== */
+.anatomie-container {
+  margin: var(--space-xl) 0;
+  padding: var(--space-lg);
+  background: var(--gris-50);
+  border-radius: var(--radius);
+}
+
+.anatomie-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ===== EXERCICES ===== */
+.exercice {
+  background: var(--gris-50);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  margin: var(--space-lg) 0;
+  border: 2px solid var(--vert-greta);
+}
+
+.exercice-title {
+  color: var(--vert-greta);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  font-size: 1.2rem;
+}
+
+.question {
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  background: white;
+  border-radius: var(--radius);
+}
+
+.question-text {
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.reponse {
+  margin-left: var(--space-lg);
+  padding: var(--space-sm);
+  cursor: pointer;
+}
+
+.reponse input[type="checkbox"] {
+  margin-right: var(--space-sm);
+}
+
+/* ===== CITATIONS ===== */
+.citation {
+  border-left: 4px solid var(--bleu-institutionnel);
+  padding: var(--space-md);
+  margin: var(--space-lg) 0;
+  background: var(--gris-50);
+  font-style: italic;
+}
+
+.citation-source {
+  display: block;
+  margin-top: var(--space-sm);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gris-500);
+  font-size: 0.9rem;
+}
+
+/* ===== TABLEAUX ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-lg) 0;
+}
+
+thead {
+  background: var(--bleu-institutionnel);
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gris-200);
+}
+
+tbody tr:hover {
+  background: var(--gris-50);
+}
+
+/* ===== IMAGES & FIGURES ===== */
+figure {
+  margin: var(--space-xl) 0;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--gris-500);
+  font-style: italic;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--gris-800);
+  color: white;
+  padding: var(--space-xl) 0;
+  margin-top: var(--space-xl);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .nav-controls {
+    flex-direction: column;
+  }
+  
+  .search-box {
+    width: 100%;
+  }
+}
+
+/* ===== IMPRESSION ===== */
+@media print {
+  body {
+    background: white;
+  }
+  
+  .nav-bar, .btn, .footer {
+    display: none;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--gris-300);
+  }
+  
+  .section-header {
+    page-break-after: avoid;
+  }
+}
+
+</style>
+<style>
+
+/* =========================
+   PRINT PACK (A4) — v3
+   Découpage revu : chapitres (h2) maîtrisés, moins de blancs, sections longues segmentées.
+   ========================= */
+@page { size: A4; margin: 12mm 12mm 14mm 12mm; }
+
+@media print {
+  html, body { background: #fff !important; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: none; }
+  a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+  .no-print, nav, header, footer, .floating-btn, .scroll-top, .topbar, .controls, .searchbar { display:none !important; }
+
+  body { font-size: 11pt; line-height: 1.35; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 15pt; margin-top: 10mm; }
+  h3 { font-size: 12.5pt; margin-top: 6mm; }
+
+  h2, h3 { break-after: avoid; page-break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+}
+
+.print-shell { max-width: 980px; margin: 0 auto; padding: 0; }
+
+@media print {
+  .print-running {
+    position: fixed; left: 0; right: 0; top: 0;
+    padding: 6mm 12mm 0 12mm;
+    font-size: 9pt; color: #333;
+    display:flex; justify-content:space-between;
+    z-index: 9999;
+  }
+  .print-running .brand { font-weight:700; color:#0b3a67; }
+  .print-running .doc { color:#555; }
+}
+
+.cover-inner, .back-inner {
+  border: 2px solid #0b3a67;
+  border-radius: 14px;
+  padding: 26mm 18mm;
+  min-height: 255mm;
+  position: relative;
+}
+.cover-kicker { font-weight: 700; letter-spacing: .02em; color: #0b3a67; text-transform: uppercase; font-size: 11pt; }
+.cover-title { margin-top: 10mm; font-size: 28pt; line-height: 1.05; color:#0b3a67; }
+.cover-sub { margin-top: 4mm; font-size: 13pt; color:#d77b00; font-weight:700; }
+.cover-meta { margin-top: 16mm; font-size: 11pt; display:grid; gap: 6mm; }
+.cover-credits { margin-top: 14mm; font-size: 10.5pt; color:#333; border-left: 4px solid #d77b00; padding-left: 8mm; }
+.cover-footer {
+  position:absolute; left: 18mm; right: 18mm; bottom: 14mm;
+  display:flex; justify-content:space-between; font-size: 10pt; color:#333;
+  border-top: 1px solid #dfe7f2; padding-top: 6mm;
+}
+.back-note { margin-top: 10mm; padding: 8mm; border-radius: 12px; background: #f4f8ff; border: 1px solid #dfe7f2; }
+
+/* TOC */
+.toc { padding-left: 18px; }
+.toc li { margin: 6px 0; }
+.toc a { text-decoration: none; border-bottom: 1px dotted #c8d6ea; }
+.toc-num { display:inline-block; width: 22px; color:#0b3a67; font-weight:700; }
+
+/* Break rules — tuned to reduce whitespace */
+.page-break-before { break-before: page; page-break-before: always; }
+.page-break-after  { break-after: page; page-break-after: always; }
+/* Soft breaks used for long chapters (before certain h3) */
+.page-break-before-soft { break-before: page; page-break-before: always; }
+
+/* Keep together only for elements that should not split */
+figure, table, .info-box, .schema, svg, .stat-card, .print-answer {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Chapters */
+.chapter { padding-top: 2mm; }
+/* Avoid cutting immediately after chapter title */
+.chapter > h2 + * { break-before: avoid; page-break-before: avoid; }
+
+/* Tables */
+@media print {
+  table { width: 100% !important; }
+  thead { display: table-header-group; }
+  tfoot { display: table-footer-group; }
+  tr, td, th { break-inside: avoid; page-break-inside: avoid; }
+}
+
+/* Print answers */
+@media print {
+  .print-answer { 
+    margin-top: 4mm; margin-bottom: 6mm;
+    border: 1px solid #cfd9e6;
+    border-radius: 10px;
+    padding: 6mm;
+  }
+  .print-answer-label { font-weight:700; color:#0b3a67; margin-bottom: 3mm; }
+  .print-answer-lines {
+    min-height: 22mm;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 18px, rgba(207,217,230,1) 19px);
+    background-size: 100% 20px;
+  }
+}
+
+</style>
+<style>
+/* =========================
+   PRINT PATCH — v4
+   Objectif : corriger les découpages Chrome (flex/grid + blocs pédagogiques coupés)
+   ========================= */
+@media print {
+  /* Chrome coupe mal les flex/grid : on force en bloc pour l'impression */
+  .info-box, .stat-card, .section-header, .anatomie-container, .exercice, .question, .reponse,
+  .sommaire-item, .section {
+    display: block !important;
+  }
+
+  /* On évite les découpes au milieu des blocs pédagogiques */
+  .info-box, .stat-card, .anatomie-container, .exercice, .question, .reponse, .schema {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Images/SVG : pas de débordement + taille auto */
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  svg { width: 100% !important; }
+
+  /* Titres : éviter qu'un H3 se retrouve seul en bas de page */
+  h3 { break-after: avoid !important; page-break-after: avoid !important; }
+  h3 + * { break-before: avoid !important; page-break-before: avoid !important; }
+
+  /* Liens : garder lisible en print */
+  a[href^="http"]:after { word-break: break-all; }
+
+  /* Petites respirations visuelles */
+  .info-box, .exercice { margin-top: 4mm !important; margin-bottom: 4mm !important; }
+}
+
+/* Désactive les soft breaks automatiques si trop agressifs */
+@media print {
+  .page-break-before-soft { break-before: auto !important; page-break-before: auto !important; }
+}
+
+
+/* =========================
+   PRINT PATCH — v5 (Chrome print stability)
+   Objectif : corriger les dernières erreurs de découpage (grids/cards/témoignages)
+   ========================= */
+@media print {
+
+  /* 1) Grids/Flex : Chrome coupe mal => on force un flux vertical stable */
+  .grid, .row, .columns, .col, .cards, .card-grid, .grid-2, .grid-3, .grid-4,
+  .two-col, .two-columns, .three-col, .three-columns,
+  .anatomie-container, .testimonials, .testimonials-grid, .temoignages, .temoignages-grid,
+  .stats-grid, .stat-grid, .kpi-grid {
+    display: block !important;
+  }
+
+  /* 2) Cartes : éviter les demi-cartes sur 2 pages */
+  .card, .stat-card, .info-box, .schema-card, .quote-card, .testimonial, .temoignage {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* 3) Sections sensibles : on évite qu’un titre parte en bas de page avec 1 carte derrière */
+  h2, h3 { 
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+  h2 + .cards, h2 + .card-grid, h2 + .grid, h2 + .row, h2 + .testimonials-grid, h2 + .temoignages-grid,
+  h3 + .cards, h3 + .card-grid, h3 + .grid, h3 + .row {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  /* 4) Ajustement des espacements : réduit les “blancs” induits par margin/padding web */
+  .chapter { padding-top: 0 !important; }
+  h2 { margin-top: 7mm !important; }
+  h3 { margin-top: 4mm !important; }
+  .card, .info-box, figure, table, svg { margin-bottom: 4mm !important; }
+
+  /* 5) Images/SVG : bornage strict pour éviter débordements */
+  img, svg, figure img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  svg { max-height: 220mm !important; }
+
+  /* 6) Tables : éviter les lignes orphelines */
+  table { break-inside: auto !important; }
+  tr { break-inside: avoid !important; page-break-inside: avoid !important; }
+
+  /* 7) Témoignages : on force chaque carte à rester entière et on autorise le passage page suivante */
+  .testimonials-grid .card, .temoignages-grid .card,
+  .testimonials .card, .temoignages .card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+</style></head>
+<body>
+<div class="print-running no-print">
+<div class="brand">Livret Stagiaire — Ergonomie et Prévention des TMS</div>
+<div class="doc">Benoît Deflandre — GRETA GIP FIPAN • Académie de Nice</div>
+</div>
+<div class="print-shell">
+<section class="cover page-break-after">
+<div class="cover-inner">
+<div class="cover-kicker">GRETA / GIP-FIPAN • Académie de Nice</div>
+<h1 class="cover-title">Livret Stagiaire — Ergonomie et Prévention des TMS</h1>
+<div class="cover-sub">Version imprimable — livret stagiaire (V5)</div>
+<div class="cover-meta">
+<div><strong>Session :</strong> ____________________</div>
+<div><strong>Groupe :</strong> ____________________</div>
+<div><strong>Dates :</strong> ____________________</div>
+<div><strong>Formateur :</strong> ____________________</div>
+</div>
+<div class="cover-credits">Benoît Deflandre — GRETA GIP FIPAN • Académie de Nice</div>
+<div class="cover-footer">
+<span>Document pédagogique — impression A4</span>
+<span class="cover-date">Date : ____ / ____ / ______</span>
+</div>
+</div>
+</section>
+<section class="page-break-after">
+<h2>Sommaire</h2>
+<p class="muted">Sommaire cliquable en PDF (si impression “Enregistrer en PDF”).</p>
+<ol class="toc">
+<li class="toc-l2"><a href="#sommaire"><span class="toc-num">1.</span> 📑 Sommaire</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#1-comprendre-les-tms">1. Comprendre les TMS</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#2-situations-risque">2. Situations à risque</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#3-pr-vention">3. Prévention</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#4-mise-en-pratique">4. Mise en pratique</a></li>
+<li class="toc-l2"><a href="#comprendre-les-tms"><span class="toc-num">2.</span> Comprendre les TMS</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#qu-est-ce-qu-un-tms">Qu'est-ce qu'un TMS ?</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#anatomie-de-base">Anatomie de base</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#les-facteurs-de-risque">Les facteurs de risque</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#les-principales-pathologies">Les principales pathologies</a></li>
+<li class="toc-l2"><a href="#situations-risque-2"><span class="toc-num">3.</span> Situations à risque</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#les-postures-contraignantes">Les postures contraignantes</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#les-gestes-r-p-titifs">Les gestes répétitifs</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#la-manutention-de-charges">La manutention de charges</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#l-environnement-de-travail">L'environnement de travail</a></li>
+<li class="toc-l2"><a href="#pr-vention"><span class="toc-num">4.</span> Prévention</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#principes-d-conomie-d-effort">Principes d'économie d'effort</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#am-nagement-du-poste-de-travail">Aménagement du poste de travail</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#chauffements-et-tirements">Échauffements et étirements</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#organisation-du-travail">Organisation du travail</a></li>
+<li class="toc-l2"><a href="#mise-en-pratique"><span class="toc-num">5.</span> Mise en pratique</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#tudes-de-cas-m-tier">Études de cas métier</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#exercices-d-application">Exercices d'application</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#t-moignages-de-stagiaires">Témoignages de stagiaires</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#auto-valuation-de-mon-poste">Auto-évaluation de mon poste</a></li>
+<li class="toc-l3" style="margin-left:18px"><a href="#ressources-et-contacts">Ressources et contacts</a></li>
+</ol>
+</section>
+<section class="page-break-before">
+<h2>Contenu</h2>
+<p class="muted">Version optimisée pour impression A4 (découpage revu). Pour un rendu “livret”, exportez en PDF puis imprimez en 2 pages par feuille (recto/verso) si besoin.</p>
+</section>
+<body><div class="print-content"><section class="preface">
+<!-- HEADER -->
+<header class="header">
+<div class="container">
+<div class="header-content">
+<div class="logos">
+<img alt="République Française - GRETA GIP-FIPAN" class="logo-img" src="data:image/png;base64,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" style="height: 55px;"/>
+<img alt="FORPRO PACA - Réseau Formation Professionnelle" class="logo-img" src="data:image/png;base64,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" style="height: 45px;"/>
+</div>
+<div class="title-area">
+<h1 class="main-title" id="ergonomie-et-pr-vention-des-tms">Ergonomie et Prévention des TMS</h1>
+<p class="subtitle">Livret Stagiaire — Formation Professionnelle</p>
+<div class="meta-info">
+<span class="badge">📚 16 modules</span>
+<span class="badge">⏱️ ~4h de formation</span>
+<span class="badge">✅ Conforme INRS</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- NAVIGATION -->
+<div class="container">
+<nav class="nav-bar">
+</nav>
+<!-- SOMMAIRE -->
+<section class="sommaire">
+<h2 id="sommaire">📑 Sommaire</h2>
+<div class="sommaire-grid">
+<div class="sommaire-item" onclick="scrollToSection('comprendre-tms')">
+<h3 id="1-comprendre-les-tms">1. Comprendre les TMS</h3>
+<p>Définition, anatomie, facteurs de risque</p>
+</div>
+<div class="sommaire-item" onclick="scrollToSection('situations-risque')">
+<h3 id="2-situations-risque">2. Situations à risque</h3>
+<p>Postures, gestes, manutention</p>
+</div>
+<div class="sommaire-item" onclick="scrollToSection('prevention')">
+<h3 id="3-pr-vention">3. Prévention</h3>
+<p>Principes, aménagement, exercices</p>
+</div>
+<div class="sommaire-item" onclick="scrollToSection('pratique')">
+<h3 id="4-mise-en-pratique">4. Mise en pratique</h3>
+<p>Cas métier, exercices, évaluation</p>
+</div>
+</div>
+</section>
+<!-- SECTION 1 : COMPRENDRE LES TMS -->
+<section class="section" id="comprendre-tms">
+<div class="section-header">
+<span class="section-number">1</span>
+<h2 class="section-title" id="comprendre-les-tms">Comprendre les TMS</h2>
+</div>
+<h3 id="qu-est-ce-qu-un-tms">Qu'est-ce qu'un TMS ?</h3>
+<p>
+      Les <strong>Troubles Musculo-Squelettiques (TMS)</strong> sont des affections qui touchent les muscles, les tendons, les nerfs et les articulations. Ils se manifestent principalement au niveau des membres supérieurs (épaules, coudes, poignets, mains) et de la colonne vertébrale (dos, nuque).
+    </p>
+<div class="info-box important">
+<strong>⚠️ Première cause de maladie professionnelle en France</strong>
+      Les TMS représentent 87% des maladies professionnelles reconnues et sont responsables de millions de journées de travail perdues chaque année.
+    </div>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-number">87%</div>
+<div class="stat-label">Des maladies professionnelles</div>
+</div>
+<div class="stat-card" style="background: linear-gradient(135deg, var(--vert-greta), #008c82);">
+<div class="stat-number">10M</div>
+<div class="stat-label">Journées perdues/an</div>
+</div>
+<div class="stat-card" style="background: linear-gradient(135deg, var(--jaune-accent), #d99d00);">
+<div class="stat-number">2 Mds€</div>
+<div class="stat-label">Coût annuel</div>
+</div>
+</div>
+<h3 id="anatomie-de-base">Anatomie de base</h3>
+<p>
+      Pour comprendre les TMS, il est essentiel de connaître les principales structures du corps humain sollicitées dans le travail quotidien.
+    </p>
+<h4>La colonne vertébrale</h4>
+<p>
+      La colonne vertébrale est composée de 33 vertèbres empilées, séparées par des disques intervertébraux qui jouent le rôle d'amortisseurs. Elle se divise en 5 régions :
+    </p>
+<ul>
+<li><strong>Cervicales (7 vertèbres)</strong> : Support de la tête, grande mobilité</li>
+<li><strong>Dorsales (12 vertèbres)</strong> : Protection du thorax, attachement des côtes</li>
+<li><strong>Lombaires (5 vertèbres)</strong> : Zone la plus sollicitée, 87% des TMS du dos</li>
+<li><strong>Sacrées (5 vertèbres soudées)</strong> : Base de la colonne, transmission des forces</li>
+<li><strong>Coccyx (4 vertèbres soudées)</strong> : Vestige évolutif</li>
+</ul>
+<div class="anatomie-container">
+<svg class="anatomie-svg" viewbox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+<!-- Colonne vertébrale simplifiée -->
+<defs>
+<lineargradient id="vertebreGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#b3d9e8;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+<rect fill="#f8fafb" height="600" rx="8" width="400"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="18" font-weight="700" text-anchor="middle" x="200" y="30">Colonne vertébrale</text>
+<!-- Cervicales -->
+<text fill="#005a8c" font-family="Marianne" font-size="14" font-weight="600" x="50" y="80">Cervicales</text>
+<ellipse cx="200" cy="90" fill="url(#vertebreGrad)" rx="30" ry="12" stroke="#005a8c" stroke-width="1.5"></ellipse>
+<ellipse cx="200" cy="120" fill="url(#vertebreGrad)" rx="30" ry="12" stroke="#005a8c" stroke-width="1.5"></ellipse>
+<ellipse cx="200" cy="150" fill="url(#vertebreGrad)" rx="30" ry="12" stroke="#005a8c" stroke-width="1.5"></ellipse>
+<!-- Dorsales -->
+<text fill="#005a8c" font-family="Marianne" font-size="14" font-weight="600" x="50" y="220">Dorsales</text>
+<path d="M 210 180 Q 190 260 200 340" fill="none" stroke="#005a8c" stroke-width="3"></path>
+<ellipse cx="205" cy="220" fill="url(#vertebreGrad)" rx="32" ry="14" stroke="#005a8c" stroke-width="1.5"></ellipse>
+<ellipse cx="200" cy="270" fill="url(#vertebreGrad)" rx="32" ry="14" stroke="#005a8c" stroke-width="1.5"></ellipse>
+<!-- Lombaires (zone à risque) -->
+<text fill="#f9b000" font-family="Marianne" font-size="14" font-weight="600" x="50" y="380">Lombaires</text>
+<rect fill="#fef3c7" height="60" opacity="0.3" rx="4" stroke="#f9b000" stroke-width="2" width="110" x="40" y="390"></rect>
+<path d="M 200 340 Q 215 400 205 460" fill="none" stroke="#f9b000" stroke-width="3"></path>
+<ellipse cx="207" cy="380" fill="url(#vertebreGrad)" rx="38" ry="16" stroke="#f9b000" stroke-width="2"></ellipse>
+<ellipse cx="210" cy="420" fill="url(#vertebreGrad)" rx="38" ry="16" stroke="#f9b000" stroke-width="2"></ellipse>
+<text fill="#f9b000" font-family="Marianne" font-size="11" font-weight="600" x="280" y="420">⚠️ 87% des TMS</text>
+<!-- Sacrum -->
+<text fill="#005a8c" font-family="Marianne" font-size="14" font-weight="600" x="50" y="510">Sacrum</text>
+<path d="M 205 460 L 200 520" fill="none" stroke="#005a8c" stroke-width="3"></path>
+<ellipse cx="200" cy="500" fill="url(#vertebreGrad)" rx="35" ry="20" stroke="#005a8c" stroke-width="1.5"></ellipse>
+</svg>
+</div>
+<h4>L'épaule et le membre supérieur</h4>
+<p>
+      L'épaule est l'articulation la plus mobile du corps humain, mais aussi l'une des plus vulnérables aux TMS. Elle comprend plusieurs structures :
+    </p>
+<ul>
+<li><strong>La coiffe des rotateurs</strong> : 4 muscles permettant la rotation et l'élévation du bras</li>
+<li><strong>L'articulation gléno-humérale</strong> : Entre l'omoplate et l'humérus</li>
+<li><strong>Le coude</strong> : Articulation complexe sollicitée dans les gestes répétitifs</li>
+<li><strong>Le poignet et la main</strong> : 27 os, zones sensibles (canal carpien)</li>
+</ul>
+<div class="anatomie-container">
+<svg class="anatomie-svg" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8fafb" height="400" rx="8" width="400"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="18" font-weight="700" text-anchor="middle" x="200" y="30">Anatomie de l'épaule</text>
+<!-- Omoplate -->
+<path d="M 150 180 Q 120 200 130 260 L 160 280 Q 170 250 160 220 Z" fill="#b3d9e8" stroke="#005a8c" stroke-width="2"></path>
+<text fill="#005a8c" font-family="Marianne" font-size="10" font-weight="600" x="145" y="240">Omoplate</text>
+<!-- Clavicule -->
+<ellipse cx="220" cy="120" fill="#b3d9e8" rx="60" ry="8" stroke="#005a8c" stroke-width="2"></ellipse>
+<text fill="#005a8c" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="220" y="110">Clavicule</text>
+<!-- Tête humérale -->
+<circle cx="200" cy="160" fill="#e8f4f8" r="35" stroke="#005a8c" stroke-width="2"></circle>
+<text fill="#005a8c" font-family="Marianne" font-size="9" text-anchor="middle" x="200" y="165">Tête</text>
+<text fill="#005a8c" font-family="Marianne" font-size="9" text-anchor="middle" x="200" y="177">humérale</text>
+<!-- Humérus -->
+<rect fill="#b3d9e8" height="120" rx="4" stroke="#005a8c" stroke-width="2" width="30" x="185" y="195"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="200" y="260">Humérus</text>
+<!-- Coiffe des rotateurs -->
+<path d="M 160 140 Q 180 135 200 140" fill="none" stroke="#10b981" stroke-width="4"></path>
+<path d="M 200 140 Q 220 135 240 140" fill="none" stroke="#10b981" stroke-width="4"></path>
+<text fill="#059669" font-family="Marianne" font-size="9" font-weight="600" text-anchor="middle" x="200" y="130">Sus-épineux</text>
+<path d="M 165 160 Q 180 155 200 160" fill="none" stroke="#3b82f6" stroke-width="3"></path>
+<text fill="#1d4ed8" font-family="Marianne" font-size="8" x="180" y="175">Sous-épineux</text>
+<path d="M 165 180 Q 180 178 195 180" fill="none" stroke="#8b5cf6" stroke-width="3"></path>
+<text fill="#6d28d9" font-family="Marianne" font-size="8" x="175" y="195">Petit rond</text>
+<!-- Zone de conflit -->
+<ellipse cx="200" cy="145" fill="none" rx="30" ry="15" stroke="#dc2626" stroke-dasharray="4,3" stroke-width="2"></ellipse>
+<text fill="#dc2626" font-family="Marianne" font-size="10" font-weight="600" x="250" y="145">⚠️ Zone de conflit</text>
+<line stroke="#dc2626" stroke-width="1.5" x1="230" x2="248" y1="145" y2="145"></line>
+<!-- Légende -->
+<rect fill="white" height="60" rx="4" stroke="#cbd5e1" stroke-width="1" width="360" x="20" y="330"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="12" font-weight="700" text-anchor="middle" x="200" y="350">Muscles de la coiffe des rotateurs</text>
+<line stroke="#10b981" stroke-width="3" x1="30" x2="50" y1="365" y2="365"></line>
+<text fill="#475569" font-family="Marianne" font-size="10" x="55" y="369">Sus-épineux (abduction)</text>
+<line stroke="#3b82f6" stroke-width="3" x1="220" x2="240" y1="365" y2="365"></line>
+<text fill="#475569" font-family="Marianne" font-size="10" x="245" y="369">Sous-épineux</text>
+</svg>
+</div>
+<h3 id="les-facteurs-de-risque">Les facteurs de risque</h3>
+<p>
+      Les TMS résultent d'une combinaison de plusieurs facteurs. On distingue trois grandes catégories :
+    </p>
+<h4>1. Facteurs biomécaniques</h4>
+<ul>
+<li><strong>Répétitivité</strong> : Répétition des mêmes gestes plusieurs fois par minute</li>
+<li><strong>Force</strong> : Efforts physiques importants, port de charges lourdes</li>
+<li><strong>Postures contraignantes</strong> : Positions articulaires extrêmes, maintenues longtemps</li>
+<li><strong>Vibrations</strong> : Utilisation d'outils vibrants</li>
+<li><strong>Froid</strong> : Température ambiante basse affectant la dextérité</li>
+</ul>
+<h4>2. Facteurs organisationnels</h4>
+<ul>
+<li>Cadences de travail élevées et pression temporelle</li>
+<li>Absence de pauses ou temps de récupération insuffisants</li>
+<li>Monotonie des tâches et manque de variété</li>
+<li>Manque d'autonomie dans l'organisation du travail</li>
+</ul>
+<h4>3. Facteurs psychosociaux</h4>
+<ul>
+<li>Stress et charge mentale élevée</li>
+<li>Manque de reconnaissance du travail accompli</li>
+<li>Relations difficiles avec la hiérarchie ou les collègues</li>
+<li>Insécurité de l'emploi</li>
+</ul>
+<div class="citation">
+      "La prévention des TMS nécessite une approche globale intégrant les dimensions physique, organisationnelle et psychosociale du travail."
+      <span class="citation-source">— INRS, Démarche de prévention des TMS (ED 6518)</span>
+</div>
+<h3 id="les-principales-pathologies">Les principales pathologies</h3>
+<p>
+      Les TMS regroupent plusieurs pathologies distinctes, affectant différentes parties du corps :
+    </p>
+<table>
+<thead>
+<tr>
+<th>Pathologie</th>
+<th>Localisation</th>
+<th>Symptômes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lombalgie</strong></td>
+<td>Bas du dos</td>
+<td>Douleur, raideur, limitation des mouvements</td>
+</tr>
+<tr>
+<td><strong>Tendinite de l'épaule</strong></td>
+<td>Épaule, coiffe des rotateurs</td>
+<td>Douleur à la mobilisation, perte de force</td>
+</tr>
+<tr>
+<td><strong>Épicondylite</strong></td>
+<td>Coude</td>
+<td>Douleur externe du coude, faiblesse préhension</td>
+</tr>
+<tr>
+<td><strong>Syndrome du canal carpien</strong></td>
+<td>Poignet</td>
+<td>Fourmillements, engourdissements main</td>
+</tr>
+<tr>
+<td><strong>Cervicalgie</strong></td>
+<td>Nuque</td>
+<td>Douleur, raideur, maux de tête</td>
+</tr>
+</tbody>
+</table>
+<h4>Focus : La hernie discale</h4>
+<p>
+      La hernie discale est l'une des pathologies les plus invalidantes. Elle survient lorsque le noyau du disque intervertébral fait saillie et comprime un nerf.
+    </p>
+<div class="anatomie-container">
+<svg class="anatomie-svg" viewbox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient id="disqueSain">
+<stop offset="0%" style="stop-color:#ffd700;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#ffa500;stop-opacity:1"></stop>
+</radialgradient>
+<radialgradient id="disqueHernie">
+<stop offset="0%" style="stop-color:#dc2626;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#991b1b;stop-opacity:1"></stop>
+</radialgradient>
+</defs>
+<rect fill="#f8fafb" height="350" rx="8" width="400"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="18" font-weight="700" text-anchor="middle" x="200" y="30">Hernie discale lombaire</text>
+<!-- PARTIE GAUCHE : Disque sain -->
+<text fill="#10b981" font-family="Marianne" font-size="14" font-weight="600" text-anchor="middle" x="100" y="60">Disque sain</text>
+<rect fill="#b3d9e8" height="30" rx="4" stroke="#005a8c" stroke-width="2" width="120" x="40" y="80"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="100" y="100">L4</text>
+<ellipse cx="100" cy="125" fill="url(#disqueSain)" rx="50" ry="15" stroke="#d97706" stroke-width="2"></ellipse>
+<ellipse cx="100" cy="125" fill="#fef3c7" opacity="0.6" rx="25" ry="8"></ellipse>
+<text fill="#78350f" font-family="Marianne" font-size="9" text-anchor="middle" x="100" y="128">Noyau</text>
+<rect fill="#b3d9e8" height="30" rx="4" stroke="#005a8c" stroke-width="2" width="120" x="40" y="140"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="100" y="160">L5</text>
+<line stroke="#10b981" stroke-width="1.5" x1="150" x2="190" y1="125" y2="105"></line>
+<text fill="#10b981" font-family="Marianne" font-size="10" x="195" y="105">Hauteur normale</text>
+<!-- PARTIE DROITE : Hernie -->
+<text fill="#dc2626" font-family="Marianne" font-size="14" font-weight="600" text-anchor="middle" x="300" y="60">Hernie discale</text>
+<rect fill="#b3d9e8" height="30" rx="4" stroke="#005a8c" stroke-width="2" width="120" x="240" y="80"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="300" y="100">L4</text>
+<ellipse cx="300" cy="122" fill="url(#disqueSain)" rx="50" ry="12" stroke="#d97706" stroke-width="2"></ellipse>
+<ellipse cx="330" cy="122" fill="url(#disqueHernie)" rx="15" ry="10" stroke="#991b1b" stroke-width="2"></ellipse>
+<path d="M 340 122 Q 350 122 355 125" fill="none" stroke="#dc2626" stroke-width="2"></path>
+<line stroke="#dc2626" stroke-width="3" x1="355" x2="370" y1="125" y2="160"></line>
+<line stroke="#fca5a5" stroke-width="1.5" x1="357" x2="372" y1="127" y2="162"></line>
+<rect fill="#b3d9e8" height="30" rx="4" stroke="#005a8c" stroke-width="2" width="120" x="240" y="134"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="300" y="154">L5</text>
+<text fill="#dc2626" font-family="Marianne" font-size="9" font-weight="600" x="340" y="105">Hernie</text>
+<text fill="#dc2626" font-family="Marianne" font-size="9" x="375" y="150">Nerf</text>
+<text fill="#dc2626" font-family="Marianne" font-size="9" x="375" y="162">comprimé</text>
+<!-- Symptômes -->
+<rect fill="white" height="130" rx="6" stroke="#cbd5e1" stroke-width="1" width="360" x="20" y="200"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="14" font-weight="700" text-anchor="middle" x="200" y="225">Symptômes et conséquences</text>
+<circle cx="40" cy="250" fill="#dc2626" r="5"></circle>
+<text fill="#1e293b" font-family="Marianne" font-size="11" x="55" y="254">Douleur lombaire intense (lombalgie)</text>
+<circle cx="40" cy="275" fill="#dc2626" r="5"></circle>
+<text fill="#1e293b" font-family="Marianne" font-size="11" x="55" y="279">Sciatique : douleur irradiant dans la jambe</text>
+<circle cx="40" cy="300" fill="#dc2626" r="5"></circle>
+<text fill="#1e293b" font-family="Marianne" font-size="11" x="55" y="304">Engourdissements, fourmillements, perte de force</text>
+<rect fill="#fef2f2" height="15" rx="3" width="340" x="30" y="310"></rect>
+<text fill="#991b1b" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="200" y="320">⚠️ Urgence médicale si perte de contrôle sphinctérien</text>
+</svg>
+</div>
+</section>
+<!-- SECTION 2 : SITUATIONS À RISQUE -->
+<section class="section" id="situations-risque">
+<div class="section-header">
+<span class="section-number">2</span>
+<h2 class="section-title" id="situations-risque-2">Situations à risque</h2>
+</div>
+<h3 id="les-postures-contraignantes">Les postures contraignantes</h3>
+<p>
+      Une posture est dite contraignante lorsqu'elle éloigne une articulation de sa position neutre de confort. Ces postures augmentent considérablement le risque de TMS lorsqu'elles sont maintenues longtemps ou répétées fréquemment.
+    </p>
+<h4>Postures à risque pour le dos</h4>
+<ul>
+<li><strong>Flexion du tronc</strong> : Se pencher en avant au-delà de 30°</li>
+<li><strong>Torsion</strong> : Rotation du buste sans bouger les pieds</li>
+<li><strong>Extension prolongée</strong> : Cambrure excessive (travail bras levés)</li>
+<li><strong>Position assise prolongée</strong> : Sans soutien lombaire adapté</li>
+<li><strong>Position debout statique</strong> : Plus de 2 heures sans bouger</li>
+</ul>
+<div class="anatomie-container">
+<svg class="anatomie-svg" viewbox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8fafb" height="300" rx="8" width="500"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="18" font-weight="700" text-anchor="middle" x="250" y="30">Port de charge : Postures comparées</text>
+<!-- MAUVAISE POSTURE -->
+<text fill="#dc2626" font-family="Marianne" font-size="14" font-weight="600" text-anchor="middle" x="120" y="60">❌ Mauvaise posture</text>
+<!-- Personnage penché -->
+<circle cx="120" cy="90" fill="#fca5a5" r="12" stroke="#dc2626" stroke-width="2"></circle>
+<path d="M 120 102 Q 140 140 120 180" fill="none" stroke="#dc2626" stroke-width="4"></path>
+<line stroke="#dc2626" stroke-width="3" x1="120" x2="90" y1="115" y2="130"></line>
+<line stroke="#dc2626" stroke-width="3" x1="120" x2="150" y1="115" y2="130"></line>
+<line stroke="#dc2626" stroke-width="3" x1="120" x2="90" y1="180" y2="220"></line>
+<line stroke="#dc2626" stroke-width="3" x1="120" x2="150" y1="180" y2="220"></line>
+<!-- Carton loin -->
+<rect fill="#fca5a5" height="25" stroke="#dc2626" stroke-width="2" width="30" x="140" y="200"></rect>
+<text fill="#991b1b" font-family="Marianne" font-size="10" text-anchor="middle" x="155" y="216">15kg</text>
+<!-- Flèches de contrainte -->
+<path d="M 125 140 Q 130 150 125 160" fill="none" marker-end="url(#arrow-red)" stroke="#dc2626" stroke-width="2"></path>
+<text fill="#dc2626" font-family="Marianne" font-size="10" x="140" y="155">Pression x10</text>
+<!-- Problèmes -->
+<rect fill="#fef2f2" height="50" rx="4" stroke="#dc2626" stroke-width="1" width="160" x="40" y="240"></rect>
+<text fill="#991b1b" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="120" y="258">Problèmes :</text>
+<text fill="#991b1b" font-family="Marianne" font-size="9" text-anchor="middle" x="120" y="272">• Dos rond (hernie)</text>
+<text fill="#991b1b" font-family="Marianne" font-size="9" text-anchor="middle" x="120" y="284">• Jambes tendues</text>
+<!-- BONNE POSTURE -->
+<text fill="#10b981" font-family="Marianne" font-size="14" font-weight="600" text-anchor="middle" x="380" y="60">✅ Bonne posture</text>
+<!-- Personnage accroupi -->
+<circle cx="380" cy="90" fill="#a7f3d0" r="12" stroke="#10b981" stroke-width="2"></circle>
+<line stroke="#10b981" stroke-width="4" x1="380" x2="380" y1="102" y2="140"></line>
+<line stroke="#10b981" stroke-width="3" x1="380" x2="355" y1="115" y2="125"></line>
+<line stroke="#10b981" stroke-width="3" x1="380" x2="405" y1="115" y2="125"></line>
+<path d="M 380 140 Q 365 160 365 190" fill="none" stroke="#10b981" stroke-width="3"></path>
+<path d="M 380 140 Q 395 160 395 190" fill="none" stroke="#10b981" stroke-width="3"></path>
+<!-- Carton près du corps -->
+<rect fill="#a7f3d0" height="20" stroke="#10b981" stroke-width="2" width="25" x="370" y="125"></rect>
+<text fill="#059669" font-family="Marianne" font-size="9" text-anchor="middle" x="382" y="138">15kg</text>
+<!-- Flèches bonnes pratiques -->
+<path d="M 380 105 L 380 100" stroke="#10b981" stroke-width="2"></path>
+<text fill="#10b981" font-family="Marianne" font-size="9" x="350" y="108">Dos droit</text>
+<!-- Avantages -->
+<rect fill="#d1fae5" height="50" rx="4" stroke="#10b981" stroke-width="1" width="160" x="300" y="240"></rect>
+<text fill="#059669" font-family="Marianne" font-size="10" font-weight="600" text-anchor="middle" x="380" y="258">Avantages :</text>
+<text fill="#059669" font-family="Marianne" font-size="9" text-anchor="middle" x="380" y="272">• Dos droit protégé</text>
+<text fill="#059669" font-family="Marianne" font-size="9" text-anchor="middle" x="380" y="284">• Genoux fléchis (force)</text>
+<!-- Ligne de séparation -->
+<line stroke="#cbd5e1" stroke-dasharray="5,5" stroke-width="2" x1="250" x2="250" y1="50" y2="290"></line>
+</svg>
+</div>
+<div class="info-box warning">
+<strong>⚠️ La règle des 30°</strong>
+      Au-delà de 30° de flexion du tronc, la pression sur les disques lombaires augmente de 50%. C'est le seuil critique à partir duquel le risque de lombalgie augmente significativement.
+    </div>
+<h4>Postures à risque pour les membres supérieurs</h4>
+<ul>
+<li><strong>Bras levés au-dessus des épaules</strong> : Travail en hauteur prolongé</li>
+<li><strong>Coudes écartés du corps</strong> : Tension sur les épaules</li>
+<li><strong>Poignets en flexion/extension</strong> : Au-delà de 30°</li>
+<li><strong>Préhension en pince</strong> : Doigts en hyperextension</li>
+<li><strong>Tête penchée en avant</strong> : Travail sur écran mal positionné</li>
+</ul>
+<h3 id="les-gestes-r-p-titifs">Les gestes répétitifs</h3>
+<p>
+      Un geste est considéré comme répétitif lorsqu'il est effectué au moins 10 fois par minute ou que le cycle de travail dure moins de 30 secondes. La répétitivité devient problématique lorsqu'elle est associée à d'autres facteurs (force, posture).
+    </p>
+<div class="info-box important">
+<strong>🔄 Cycle de travail et répétitivité</strong>
+      Un cycle de travail de moins de 30 secondes, répété durant plus de 4 heures par jour, multiplie par 3 le risque de développer un TMS du membre supérieur.
+    </div>
+<h4>Secteurs particulièrement concernés</h4>
+<ul>
+<li><strong>Restauration</strong> : Découpe, épluchage, manipulation d'ustensiles</li>
+<li><strong>Aide à la personne</strong> : Transferts, toilettes, habillage</li>
+<li><strong>Travail sur écran</strong> : Frappe au clavier, utilisation souris</li>
+<li><strong>Industrie</strong> : Assemblage, conditionnement, manutention</li>
+</ul>
+<h3 id="la-manutention-de-charges">La manutention de charges</h3>
+<p>
+      Le port de charges est l'une des principales causes de lombalgies. Le risque dépend du poids, de la fréquence, de la distance et de la technique utilisée.
+    </p>
+<h4>Seuils réglementaires</h4>
+<table>
+<thead>
+<tr>
+<th>Population</th>
+<th>Limite ponctuelle</th>
+<th>Limite répétée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Homme adulte</strong></td>
+<td>25 kg</td>
+<td>15 kg</td>
+</tr>
+<tr>
+<td><strong>Femme adulte</strong></td>
+<td>15 kg</td>
+<td>10 kg</td>
+</tr>
+<tr>
+<td><strong>Jeune (15-18 ans)</strong></td>
+<td>10 kg</td>
+<td>5 kg</td>
+</tr>
+</tbody>
+</table>
+<div class="info-box success">
+<strong>✅ Principe de base</strong>
+      Avant de soulever une charge, toujours se poser la question : "Puis-je utiliser une aide mécanique (diable, chariot, transpalette) ?" La meilleure prévention est d'éviter le port manuel.
+    </div>
+<h4>Facteurs aggravants</h4>
+<ul>
+<li>Distance de transport supérieure à 10 mètres</li>
+<li>Charge éloignée du corps (bras tendus)</li>
+<li>Charge volumineuse limitant la visibilité</li>
+<li>Prise difficile (surfaces glissantes, pas de poignées)</li>
+<li>Sol inégal ou encombré</li>
+<li>Travail en hauteur (en dessous des genoux ou au-dessus des épaules)</li>
+</ul>
+<h3 id="l-environnement-de-travail">L'environnement de travail</h3>
+<p>
+      L'aménagement de l'espace de travail et les conditions environnementales ont un impact direct sur le risque de TMS.
+    </p>
+<h4>Facteurs d'ambiance</h4>
+<ul>
+<li><strong>Froid</strong> : Réduit la dextérité, augmente la force nécessaire</li>
+<li><strong>Bruit</strong> : Génère du stress, fatigue mentale</li>
+<li><strong>Éclairage insuffisant</strong> : Provoque des postures compensatoires</li>
+<li><strong>Vibrations</strong> : Outils vibrants, véhicules</li>
+</ul>
+<h4>Organisation de l'espace</h4>
+<ul>
+<li>Zone de préhension : objets entre genoux et épaules</li>
+<li>Hauteur de plan de travail adaptée à l'activité</li>
+<li>Espaces de rangement accessibles sans flexion/torsion</li>
+<li>Circulation dégagée, pas d'obstacle</li>
+</ul>
+</section>
+<!-- SECTION 3 : PRÉVENTION -->
+<section class="section" id="prevention">
+<div class="section-header">
+<span class="section-number">3</span>
+<h2 class="section-title" id="pr-vention">Prévention</h2>
+</div>
+<h3 id="principes-d-conomie-d-effort">Principes d'économie d'effort</h3>
+<p>
+      L'économie d'effort consiste à accomplir une tâche en minimisant la sollicitation des structures corporelles. Ces principes sont issus de l'ergonomie et de la biomécanique.
+    </p>
+<h4>Les 9 principes fondamentaux</h4>
+<div class="info-box success">
+<strong>1. Rapprocher la charge du corps</strong>
+      Plus un objet est proche du centre de gravité, moins il demande d'effort. Une charge tenue à bout de bras sollicite 10 fois plus le dos qu'une charge collée au corps.
+    </div>
+<div class="info-box success">
+<strong>2. Fléchir les genoux, pas le dos</strong>
+      Les jambes sont 4 fois plus puissantes que le dos. Plier les genoux préserve la colonne vertébrale et utilise les muscles des cuisses.
+    </div>
+<div class="info-box success">
+<strong>3. Garder le dos droit</strong>
+      Maintenir les courbures naturelles de la colonne (lordose lombaire et cervicale) répartit uniformément les pressions sur les disques.
+    </div>
+<div class="info-box success">
+<strong>4. Éviter les torsions</strong>
+      Toujours pivoter avec les pieds, jamais avec le buste seul. La rotation combinée à la flexion est particulièrement dangereuse pour les disques.
+    </div>
+<div class="info-box success">
+<strong>5. Alterner les positions</strong>
+      Changer de position toutes les 30 minutes minimum. Varier entre debout, assis, marche réduit la fatigue musculaire.
+    </div>
+<div class="info-box success">
+<strong>6. Faire des pauses actives</strong>
+      Pauses courtes (2-3 min) toutes les heures avec mobilisations et étirements légers.
+    </div>
+<div class="info-box success">
+<strong>7. Utiliser les aides techniques</strong>
+      Chariots, transpalettes, plans inclinés, pinces de préhension... Tous les moyens pour éviter l'effort direct.
+    </div>
+<div class="info-box success">
+<strong>8. Organiser son poste</strong>
+      Ranger les objets fréquemment utilisés entre les hanches et les épaules. Éviter les flexions et élévations répétées.
+    </div>
+<div class="info-box success">
+<strong>9. Demander de l'aide</strong>
+      Porter à deux au-delà de 15 kg pour une femme, 25 kg pour un homme. Communiquer pour synchroniser les mouvements.
+    </div>
+<h3 id="am-nagement-du-poste-de-travail">Aménagement du poste de travail</h3>
+<h4>Poste debout</h4>
+<ul>
+<li><strong>Hauteur du plan de travail</strong> : 5-10 cm sous les coudes en position debout</li>
+<li><strong>Repose-pied</strong> : Permet d'alterner l'appui et soulager le dos</li>
+<li><strong>Tapis anti-fatigue</strong> : Réduit la pression sur les pieds et articulations</li>
+<li><strong>Chaussures adaptées</strong> : Semelles antidérapantes, soutien de la voûte plantaire</li>
+</ul>
+<h4>Poste assis</h4>
+<ul>
+<li><strong>Siège réglable</strong> : Hauteur, dossier, accoudoirs</li>
+<li><strong>Pieds à plat</strong> : Utiliser un repose-pieds si nécessaire</li>
+<li><strong>Angle cuisses-tronc</strong> : 90° ou légèrement ouvert (100-110°)</li>
+<li><strong>Soutien lombaire</strong> : Maintien de la courbure naturelle du bas du dos</li>
+<li><strong>Écran face aux yeux</strong> : Bord supérieur à hauteur des yeux, distance 50-70 cm</li>
+<li><strong>Clavier et souris</strong> : Devant soi, coudes près du corps</li>
+</ul>
+<div class="anatomie-container">
+<svg class="anatomie-svg" viewbox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#f8fafb" height="400" rx="8" width="500"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="18" font-weight="700" text-anchor="middle" x="250" y="30">Poste de travail ergonomique</text>
+<!-- Bureau -->
+<rect fill="#8b5a3c" height="15" stroke="#6b4423" stroke-width="2" width="280" x="120" y="220"></rect>
+<!-- Écran -->
+<rect fill="#334155" height="70" rx="4" stroke="#1e293b" stroke-width="2" width="100" x="220" y="140"></rect>
+<rect fill="#64748b" height="60" width="90" x="225" y="145"></rect>
+<rect fill="#475569" height="8" width="20" x="260" y="212"></rect>
+<!-- Clavier -->
+<rect fill="#e2e8f0" height="30" rx="2" stroke="#cbd5e1" stroke-width="1" width="80" x="200" y="235"></rect>
+<!-- Souris -->
+<ellipse cx="300" cy="250" fill="#e2e8f0" rx="15" ry="20" stroke="#cbd5e1" stroke-width="1"></ellipse>
+<!-- Personnage assis -->
+<!-- Tête -->
+<circle cx="180" cy="160" fill="#fca5a5" r="15" stroke="#dc2626" stroke-width="2"></circle>
+<!-- Tronc -->
+<line stroke="#dc2626" stroke-width="5" x1="180" x2="180" y1="175" y2="240"></line>
+<!-- Bras gauche -->
+<path d="M 180 190 L 160 210 L 170 230" fill="none" stroke="#dc2626" stroke-width="4"></path>
+<!-- Bras droit -->
+<path d="M 180 190 L 210 210 L 220 235" fill="none" stroke="#dc2626" stroke-width="4"></path>
+<!-- Jambes -->
+<path d="M 180 240 L 170 280 L 165 320" fill="none" stroke="#dc2626" stroke-width="4"></path>
+<path d="M 180 240 L 185 280 L 180 320" fill="none" stroke="#dc2626" stroke-width="4"></path>
+<!-- Chaise -->
+<rect fill="#475569" height="10" rx="2" width="70" x="145" y="240"></rect>
+<rect fill="#475569" height="50" width="8" x="175" y="200"></rect>
+<path d="M 175 200 Q 165 190 165 175" fill="none" stroke="#475569" stroke-width="6"></path>
+<!-- Pieds -->
+<rect fill="#1e293b" height="5" width="30" x="150" y="320"></rect>
+<!-- Annotations avec flèches -->
+<!-- Écran -->
+<line marker-end="url(#arrow-green)" stroke="#10b981" stroke-width="2" x1="270" x2="270" y1="140" y2="110"></line>
+<text fill="#10b981" font-family="Marianne" font-size="10" font-weight="600" x="275" y="115">Haut écran = hauteur yeux</text>
+<!-- Distance écran -->
+<line stroke="#10b981" stroke-dasharray="3,2" stroke-width="1" x1="220" x2="180" y1="175" y2="175"></line>
+<text fill="#10b981" font-family="Marianne" font-size="9" text-anchor="middle" x="200" y="165">50-70 cm</text>
+<!-- Angle dos -->
+<path d="M 180 220 Q 185 220 185 215" fill="none" stroke="#10b981" stroke-width="2"></path>
+<text fill="#10b981" font-family="Marianne" font-size="9" x="195" y="220">90-110°</text>
+<!-- Coudes -->
+<circle cx="160" cy="210" fill="#10b981" r="4"></circle>
+<line stroke="#10b981" stroke-width="1.5" x1="140" x2="155" y1="210" y2="210"></line>
+<text fill="#10b981" font-family="Marianne" font-size="9" x="130" y="215">90°</text>
+<!-- Genoux -->
+<circle cx="170" cy="280" fill="#10b981" r="4"></circle>
+<line stroke="#10b981" stroke-width="1.5" x1="150" x2="165" y1="280" y2="280"></line>
+<text fill="#10b981" font-family="Marianne" font-size="9" x="140" y="285">90°</text>
+<!-- Pieds -->
+<line stroke="#10b981" stroke-width="2" x1="165" x2="165" y1="340" y2="360"></line>
+<text fill="#10b981" font-family="Marianne" font-size="9" x="170" y="355">Pieds à plat</text>
+<!-- Soutien lombaire -->
+<ellipse cx="177" cy="220" fill="none" rx="8" ry="15" stroke="#f9b000" stroke-width="2"></ellipse>
+<line stroke="#f9b000" stroke-width="1.5" x1="160" x2="170" y1="225" y2="225"></line>
+<text fill="#d97706" font-family="Marianne" font-size="9" x="140" y="230">Soutien</text>
+<!-- Légende -->
+<rect fill="white" height="50" rx="4" stroke="#cbd5e1" stroke-width="1" width="460" x="20" y="340"></rect>
+<text fill="#005a8c" font-family="Marianne" font-size="12" font-weight="700" text-anchor="middle" x="250" y="360">Points clés de l'ergonomie</text>
+<circle cx="40" cy="375" fill="#10b981" r="3"></circle>
+<text fill="#475569" font-family="Marianne" font-size="10" x="50" y="379">Angles 90° (coudes, genoux, cheville)</text>
+<circle cx="250" cy="375" fill="#10b981" r="3"></circle>
+<text fill="#475569" font-family="Marianne" font-size="10" x="260" y="379">Écran à hauteur des yeux</text>
+<circle cx="410" cy="375" fill="#f9b000" r="3"></circle>
+<text fill="#475569" font-family="Marianne" font-size="10" x="420" y="379">Soutien lombaire</text>
+</svg>
+</div>
+<h4>Environnement général</h4>
+<ul>
+<li><strong>Éclairage</strong> : 300-500 lux pour travail de précision</li>
+<li><strong>Température</strong> : 18-20°C pour travail physique, 20-22°C pour travail sédentaire</li>
+<li><strong>Espace de circulation</strong> : Largeur minimum 80 cm</li>
+<li><strong>Hauteur sous plafond</strong> : Minimum 2,5 m</li>
+</ul>
+<h3 id="chauffements-et-tirements">Échauffements et étirements</h3>
+<p>
+      L'échauffement prépare les muscles et articulations à l'effort. Les étirements maintiennent la souplesse et réduisent les tensions. Ils sont complémentaires mais distincts.
+    </p>
+<h4>Échauffement (avant le travail)</h4>
+<div class="exercice">
+<div class="exercice-title">🏃 Routine d'échauffement (5 minutes)</div>
+<div class="question">
+<div class="question-text"><strong>1. Nuque</strong></div>
+<p>Incliner doucement la tête de gauche à droite, puis d'avant en arrière. 10 répétitions.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>2. Épaules</strong></div>
+<p>Rotations des épaules d'avant en arrière, puis d'arrière en avant. 10 répétitions dans chaque sens.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>3. Bras</strong></div>
+<p>Mouvements de rotation des bras (moulinet). 10 répétitions.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>4. Poignets</strong></div>
+<p>Rotations des poignets dans les deux sens. 10 répétitions.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>5. Dos</strong></div>
+<p>Flexions latérales du tronc, en gardant les hanches fixes. 5 répétitions de chaque côté.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>6. Jambes</strong></div>
+<p>Montées de genoux alternées sur place. 20 répétitions.</p>
+</div>
+</div>
+<h4>Étirements (pendant les pauses)</h4>
+<div class="info-box info">
+<strong>💡 Règle d'or des étirements</strong>
+      Maintenir chaque étirement 20-30 secondes, sans à-coup, en respirant calmement. Ne jamais forcer jusqu'à la douleur.
+    </div>
+<div class="exercice">
+<div class="exercice-title">🧘 Étirements essentiels</div>
+<div class="question">
+<div class="question-text"><strong>Nuque</strong></div>
+<p>Incliner la tête sur le côté, main posée sur la tempe pour accompagner le mouvement (sans forcer). Maintenir 20 secondes.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>Épaules</strong></div>
+<p>Ramener un bras devant soi à l'horizontale, l'autre bras vient le pousser contre la poitrine. Maintenir 20 secondes de chaque côté.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>Dos</strong></div>
+<p>Debout, mains jointes au-dessus de la tête, pousser vers le haut en grandissant. Maintenir 20 secondes.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>Lombaires</strong></div>
+<p>Assis, ramener un genou contre la poitrine, l'autre jambe tendue. Maintenir 20 secondes de chaque côté.</p>
+</div>
+<div class="question">
+<div class="question-text"><strong>Poignets</strong></div>
+<p>Bras tendu devant, paume vers le haut, l'autre main tire doucement les doigts vers soi. 20 secondes de chaque côté.</p>
+</div>
+</div>
+<h3 id="organisation-du-travail">Organisation du travail</h3>
+<p>
+      La prévention des TMS ne repose pas uniquement sur l'individu. L'organisation collective du travail joue un rôle majeur.
+    </p>
+<h4>Principes organisationnels</h4>
+<ul>
+<li><strong>Rotation des postes</strong> : Varier les tâches pour solliciter différents groupes musculaires</li>
+<li><strong>Pauses régulières</strong> : Minimum 5 minutes toutes les heures pour travail répétitif</li>
+<li><strong>Rythme adapté</strong> : Éviter les cadences excessives, prévoir du temps pour les tâches</li>
+<li><strong>Autonomie</strong> : Permettre au salarié d'adapter son organisation</li>
+<li><strong>Formation</strong> : Gestes et postures, utilisation des équipements</li>
+<li><strong>Signalement</strong> : Encourager le signalement des situations à risque</li>
+</ul>
+<div class="citation">
+      "L'organisation du travail doit permettre au salarié de gérer son activité en fonction de son état de fatigue et de varier les sollicitations biomécaniques tout au long de la journée."
+      <span class="citation-source">— INRS, Prévention des TMS (ED 6087)</span>
+</div>
+</section>
+<!-- SECTION 4 : MISE EN PRATIQUE -->
+<section class="section" id="pratique">
+<div class="section-header">
+<span class="section-number">4</span>
+<h2 class="section-title" id="mise-en-pratique">Mise en pratique</h2>
+</div>
+<h3 id="tudes-de-cas-m-tier">Études de cas métier</h3>
+<div class="info-box info">
+<strong>💼 Conseils spécifiques par métier</strong>
+<p style="margin-top: 8px;">Les TMS se manifestent différemment selon les métiers. Voici des recommandations ciblées pour les deux filières de formation.</p>
+</div>
+<h4>🍳 Métier : Commis de cuisine</h4>
+<div style="background: var(--gris-50); padding: var(--space-lg); border-radius: var(--radius); margin: var(--space-md) 0;">
+<h5 style="color: var(--vert-greta); margin-bottom: var(--space-md);">Gestes à risque identifiés</h5>
+<ul>
+<li>Découpe répétitive (légumes, viandes) : sollicitation poignet et avant-bras</li>
+<li>Position debout prolongée : fatigue lombaire et membres inférieurs</li>
+<li>Port de charges (casseroles, plaques de cuisson) : dos et épaules</li>
+<li>Flexions répétées (four, placards bas) : lombaires</li>
+<li>Gestes brusques (cadence en service) : tous les segments</li>
+</ul>
+<h5 style="color: var(--vert-greta); margin: var(--space-md) 0 var(--space-sm);">Recommandations préventives</h5>
+<ul>
+<li>✅ Alterner les tâches toutes les 30-45 minutes (découpe, cuisson, plonge)</li>
+<li>✅ Utiliser des couteaux bien affûtés pour réduire l'effort</li>
+<li>✅ Régler la hauteur du plan de travail (5-10 cm sous les coudes)</li>
+<li>✅ Porter les charges lourdes à deux ou utiliser un chariot</li>
+<li>✅ Ranger les ustensiles fréquents entre hanches et épaules</li>
+<li>✅ Utiliser un repose-pied pour alterner l'appui</li>
+<li>✅ Porter des chaussures antidérapantes avec soutien de voûte</li>
+<li>✅ Faire des pauses actives : étirements poignets, nuque, dos</li>
+</ul>
+</div>
+<h4>🏥 Métier : DEAES (Aide à la personne)</h4>
+<div style="background: var(--gris-50); padding: var(--space-lg); border-radius: var(--radius); margin: var(--space-md) 0;">
+<h5 style="color: var(--vert-greta); margin-bottom: var(--space-md);">Gestes à risque identifiés</h5>
+<ul>
+<li>Transferts de personnes (lit-fauteuil, fauteuil-toilettes) : dos, épaules</li>
+<li>Toilette et soins (postures contraignantes) : dos, genoux</li>
+<li>Aide à l'habillage (bras levés, flexions) : épaules, dos</li>
+<li>Accompagnement de la marche (soutien prolongé) : dos, bras</li>
+<li>Tâches ménagères (aspirateur, repassage) : dos, épaules, poignets</li>
+</ul>
+<h5 style="color: var(--vert-greta); margin: var(--space-md) 0 var(--space-sm);">Recommandations préventives</h5>
+<ul>
+<li>✅ Toujours utiliser les aides techniques disponibles (lève-personne, planche de transfert, ceinture de maintien)</li>
+<li>✅ Expliquer et faire participer la personne autant que possible</li>
+<li>✅ Se placer PROCHE de la personne, jamais bras tendus</li>
+<li>✅ Fléchir les genoux, garder le dos droit, écarter les pieds (stabilité)</li>
+<li>✅ Pivoter avec les pieds, JAMAIS avec le dos seul</li>
+<li>✅ Travailler à DEUX pour les personnes lourdes ou très dépendantes</li>
+<li>✅ Prévoir l'espace nécessaire avant chaque manipulation</li>
+<li>✅ Adapter la hauteur du lit (mi-cuisse pour soins, genoux pour transfert)</li>
+<li>✅ Faire des pauses entre les transferts difficiles</li>
+</ul>
+</div>
+<h4>Cas pratiques détaillés</h4>
+<h4>Cas 1 : Commis de cuisine</h4>
+<div class="exercice">
+<div class="exercice-title">🍳 Situation : Préparation des légumes</div>
+<p><strong>Contexte :</strong> Marie, 22 ans, commis de cuisine, doit éplucher 10 kg de carottes pour le service du midi. Elle travaille debout devant un plan de travail pendant 1h30 sans pause.</p>
+<p><strong>Risques identifiés :</strong></p>
+<ul>
+<li>Position debout statique prolongée</li>
+<li>Gestes répétitifs des poignets et des mains</li>
+<li>Flexion de la nuque pour regarder le plan de travail</li>
+<li>Préhension prolongée de l'éplucheur</li>
+</ul>
+<p><strong>Solutions proposées :</strong></p>
+<div class="info-box success">
+<ul>
+<li>✅ Alterner avec d'autres tâches toutes les 30 minutes</li>
+<li>✅ Régler la hauteur du plan de travail (5-10 cm sous les coudes)</li>
+<li>✅ Utiliser un repose-pied pour alterner l'appui</li>
+<li>✅ Prévoir une pause de 5 minutes après 45 minutes</li>
+<li>✅ Utiliser des outils ergonomiques (éplucheur adapté)</li>
+</ul>
+</div>
+</div>
+<h4>Cas 2 : Aide à la personne (DEAES)</h4>
+<div class="exercice">
+<div class="exercice-title">🏥 Situation : Transfert d'une personne du lit au fauteuil</div>
+<p><strong>Contexte :</strong> Jean, 28 ans, DEAES, doit réaliser 15 transferts par jour de personnes âgées semi-dépendantes.</p>
+<p><strong>Risques identifiés :</strong></p>
+<ul>
+<li>Port de charges lourdes (poids de la personne)</li>
+<li>Flexion et torsion du dos</li>
+<li>Répétition des gestes tout au long de la journée</li>
+<li>Espace parfois restreint limitant les mouvements</li>
+</ul>
+<p><strong>Solutions proposées :</strong></p>
+<div class="info-box success">
+<ul>
+<li>✅ Utiliser les aides techniques disponibles (lève-personne, planche de transfert)</li>
+<li>✅ Demander à la personne de participer autant que possible</li>
+<li>✅ Se placer proche de la personne, pieds écartés pour stabilité</li>
+<li>✅ Fléchir les genoux, garder le dos droit</li>
+<li>✅ Pivoter avec les pieds, pas avec le dos</li>
+<li>✅ Travailler à deux si la personne est lourde ou ne peut pas aider</li>
+<li>✅ Prévoir l'espace nécessaire avant le transfert</li>
+</ul>
+</div>
+</div>
+<h3 id="exercices-d-application">Exercices d'application</h3>
+<div class="exercice">
+<div class="exercice-title">📝 Quiz : Vrai ou Faux</div>
+<div class="question">
+<div class="question-text">1. Les TMS représentent 87% des maladies professionnelles reconnues en France.</div>
+<div class="reponse">
+<input data-correct="true" id="q1" type="checkbox"/>
+<label for="q1"><strong>VRAI</strong> - Les TMS sont la première cause de maladie professionnelle.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="question">
+<div class="question-text">2. Il est recommandé de porter une charge de 30 kg seul si on est un homme adulte.</div>
+<div class="reponse">
+<input data-correct="false" id="q2" type="checkbox"/>
+<label for="q2"><strong>FAUX</strong> - La limite est de 25 kg en ponctuel, et il est préférable d'utiliser une aide mécanique.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="question">
+<div class="question-text">3. Fléchir les genoux plutôt que le dos permet de protéger la colonne vertébrale.</div>
+<div class="reponse">
+<input data-correct="true" id="q3" type="checkbox"/>
+<label for="q3"><strong>VRAI</strong> - Les jambes sont plus puissantes et préservent le dos.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="question">
+<div class="question-text">4. Les étirements doivent être maintenus 5 secondes pour être efficaces.</div>
+<div class="reponse">
+<input data-correct="false" id="q4" type="checkbox"/>
+<label for="q4"><strong>FAUX</strong> - Un étirement efficace doit être maintenu 20-30 secondes.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="question">
+<div class="question-text">5. La zone lombaire concentre 87% des TMS du dos.</div>
+<div class="reponse">
+<input data-correct="true" id="q5" type="checkbox"/>
+<label for="q5"><strong>VRAI</strong> - Les lombaires sont la zone la plus sollicitée et vulnérable.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="question">
+<div class="question-text">6. Une position debout statique de 4 heures sans bouger ne présente aucun risque.</div>
+<div class="reponse">
+<input data-correct="false" id="q6" type="checkbox"/>
+<label for="q6"><strong>FAUX</strong> - Il faut alterner les positions et bouger régulièrement.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="question">
+<div class="question-text">7. Un geste est répétitif s'il est effectué plus de 10 fois par minute.</div>
+<div class="reponse">
+<input data-correct="true" id="q7" type="checkbox"/>
+<label for="q7"><strong>VRAI</strong> - C'est le seuil défini pour la répétitivité.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="question">
+<div class="question-text">8. Les facteurs psychosociaux (stress, reconnaissance) n'ont aucun impact sur les TMS.</div>
+<div class="reponse">
+<input data-correct="false" id="q8" type="checkbox"/>
+<label for="q8"><strong>FAUX</strong> - Les facteurs psychosociaux aggravent significativement les TMS.</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+</div>
+<h3 id="t-moignages-de-stagiaires">Témoignages de stagiaires</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0;">
+<div style="background: white; padding: var(--space-lg); border-radius: var(--radius); border-left: 4px solid var(--vert-greta); box-shadow: var(--shadow);">
+<div style="font-size: 2rem; color: var(--vert-greta); margin-bottom: var(--space-sm);">💬</div>
+<p style="font-style: italic; color: var(--gris-700);">
+          "Depuis que j'applique les techniques de port de charge apprises en formation, je n'ai plus de douleurs lombaires en fin de service. Fléchir les genoux change vraiment tout !"
+        </p>
+<p style="margin-top: var(--space-md); font-weight: 600; color: var(--vert-greta);">
+          — Sophie, 24 ans, Commis de cuisine
+        </p>
+</div>
+<div style="background: white; padding: var(--space-lg); border-radius: var(--radius); border-left: 4px solid var(--bleu-institutionnel); box-shadow: var(--shadow);">
+<div style="font-size: 2rem; color: var(--bleu-institutionnel); margin-bottom: var(--space-sm);">💬</div>
+<p style="font-style: italic; color: var(--gris-700);">
+          "J'ai longtemps pensé qu'avoir mal au dos faisait partie du métier. Maintenant j'utilise systématiquement le lève-personne et je demande l'aide d'un collègue. Ma santé n'a pas de prix."
+        </p>
+<p style="margin-top: var(--space-md); font-weight: 600; color: var(--bleu-institutionnel);">
+          — Marc, 31 ans, DEAES
+        </p>
+</div>
+<div style="background: white; padding: var(--space-lg); border-radius: var(--radius); border-left: 4px solid var(--jaune-accent); box-shadow: var(--shadow);">
+<div style="font-size: 2rem; color: var(--jaune-accent); margin-bottom: var(--space-sm);">💬</div>
+<p style="font-style: italic; color: var(--gris-700);">
+          "Les échauffements du matin en équipe prennent 5 minutes, mais ça fait toute la différence. Mon chef a même installé des tapis anti-fatigue, c'est beaucoup plus confortable."
+        </p>
+<p style="margin-top: var(--space-md); font-weight: 600; color: var(--jaune-accent);">
+          — Emma, 27 ans, Commis de cuisine
+        </p>
+</div>
+</div>
+<h3 id="auto-valuation-de-mon-poste">Auto-évaluation de mon poste</h3>
+<div class="exercice">
+<div class="exercice-title">🔍 Grille d'analyse de mon activité</div>
+<p><strong>Instructions :</strong> Pour chaque question, cochez si la situation s'applique à votre poste.</p>
+<h4>Postures</h4>
+<div class="question">
+<div class="reponse">
+<input id="eval1" type="checkbox"/>
+<label for="eval1">Je maintiens des postures contraignantes (flexion, torsion, bras levés) plus de 2h/jour</label>
+</div>
+<div class="reponse">
+<input id="eval2" type="checkbox"/>
+<label for="eval2">Je travaille en position statique (debout ou assis) plus de 4h/jour sans variation</label>
+</div>
+<div class="reponse">
+<input id="eval3" type="checkbox"/>
+<label for="eval3">Mon plan de travail n'est pas réglable en hauteur</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<h4>Gestes et efforts</h4>
+<div class="question">
+<div class="reponse">
+<input id="eval4" type="checkbox"/>
+<label for="eval4">Je réalise des gestes répétitifs plus de 2h/jour</label>
+</div>
+<div class="reponse">
+<input id="eval5" type="checkbox"/>
+<label for="eval5">Je porte des charges lourdes (&gt;10kg) régulièrement</label>
+</div>
+<div class="reponse">
+<input id="eval6" type="checkbox"/>
+<label for="eval6">Je n'ai pas d'aide mécanique disponible (chariot, diable...)</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<h4>Organisation</h4>
+<div class="question">
+<div class="reponse">
+<input id="eval7" type="checkbox"/>
+<label for="eval7">Je travaille avec des cadences imposées et soutenues</label>
+</div>
+<div class="reponse">
+<input id="eval8" type="checkbox"/>
+<label for="eval8">Je ne peux pas faire de pause quand j'en ressens le besoin</label>
+</div>
+<div class="reponse">
+<input id="eval9" type="checkbox"/>
+<label for="eval9">Mon travail est monotone, sans variation des tâches</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<h4>Environnement</h4>
+<div class="question">
+<div class="reponse">
+<input id="eval10" type="checkbox"/>
+<label for="eval10">L'éclairage est insuffisant sur mon poste</label>
+</div>
+<div class="reponse">
+<input id="eval11" type="checkbox"/>
+<label for="eval11">Il fait trop froid ou trop chaud</label>
+</div>
+<div class="reponse">
+<input id="eval12" type="checkbox"/>
+<label for="eval12">Mon espace de travail est encombré ou exigu</label>
+</div>
+</div><div class="print-answer"><div class="print-answer-label">Réponse :</div><div class="print-answer-lines"></div></div>
+<div class="info-box warning" style="margin-top: 20px;">
+<strong>⚠️ Interprétation</strong>
+<ul>
+<li><strong>0-2 cases cochées :</strong> Risque faible - Maintenir les bonnes pratiques</li>
+<li><strong>3-5 cases cochées :</strong> Risque modéré - Améliorer certains points</li>
+<li><strong>6-8 cases cochées :</strong> Risque élevé - Action prioritaire nécessaire</li>
+<li><strong>9+ cases cochées :</strong> Risque très élevé - Alerter l'encadrement et le médecin du travail</li>
+</ul>
+</div>
+</div>
+<h3 id="ressources-et-contacts">Ressources et contacts</h3>
+<h4>📚 Documentation INRS</h4>
+<ul>
+<li><strong>ED 6518</strong> - Démarche de prévention des TMS</li>
+<li><strong>ED 6087</strong> - Prévention des TMS : comprendre et agir</li>
+<li><strong>ED 6226</strong> - Travail sur écran : santé et ergonomie</li>
+<li><strong>ED 6379</strong> - Gestes et postures de manutention</li>
+</ul>
+<h4>🌐 Sites web utiles</h4>
+<ul>
+<li><strong>www.inrs.fr</strong> - Institut National de Recherche et de Sécurité</li>
+<li><strong>www.ameli.fr/assure/sante/themes/tms</strong> - Assurance Maladie</li>
+<li><strong>www.anact.fr</strong> - Agence Nationale pour l'Amélioration des Conditions de Travail</li>
+</ul>
+<h4>📞 Contacts locaux</h4>
+<div class="info-box info">
+<strong>Votre référent formation</strong><br/>
+      Benoît Deflandre<br/>
+      📧 benoit.deflandre@ac-nice.fr<br/>
+<br/>
+<strong>GRETA GIP-FIPAN</strong><br/>
+      Réseau de formation professionnelle<br/>
+      Académie de Nice
+    </div>
+<h4>🏥 En cas de symptômes</h4>
+<div class="info-box important">
+<strong>⚠️ Ne pas attendre</strong>
+<p>En cas de douleur persistante (plus de 7 jours), consultez :</p>
+<ul>
+<li>Votre médecin du travail</li>
+<li>Votre médecin traitant</li>
+<li>Un kinésithérapeute (sur prescription)</li>
+</ul>
+<p>Plus la prise en charge est précoce, meilleur est le pronostic.</p>
+</div>
+</section>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-links">
+<a class="footer-link" href="https://www.inrs.fr" target="_blank">INRS</a>
+<a class="footer-link" href="https://www.ameli.fr" target="_blank">Ameli</a>
+<a class="footer-link" href="https://www.anact.fr" target="_blank">ANACT</a>
+<a class="footer-link" href="mailto:benoit.deflandre@ac-nice.fr">Contact formateur</a>
+</div>
+<p style="margin-top: 16px; opacity: 0.8;">
+      © 2025 GRETA GIP-FIPAN - FORPRO PACA - Académie de Nice<br/>
+      Document pédagogique conforme aux recommandations INRS
+    </p>
+</div>
+</footer>
+</section></div></body>
+<section class="back-cover page-break-before">
+<div class="back-inner">
+<h2>Crédits &amp; utilisation</h2>
+<ul>
+<li><strong>Auteur / conception :</strong> Benoît Deflandre — GRETA GIP FIPAN • Académie de Nice</li>
+<li><strong>Usage :</strong> support de formation — reproduction interne autorisée dans le cadre pédagogique.</li>
+<li><strong>Sources :</strong> INRS / Assurance Maladie / ressources institutionnelles citées dans le document.</li>
+</ul>
+<div class="back-note">Astuce : pour un rendu “livret”, exportez en PDF puis imprimez en 2 pages par feuille (recto/verso).</div>
+</div>
+</section>
+</div>
+</body>
+</html>

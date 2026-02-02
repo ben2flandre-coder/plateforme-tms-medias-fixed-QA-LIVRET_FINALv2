@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Questionnaire TMS | Plateforme TMS</title>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+        .question{background:white;border-radius:16px;padding:1.5rem;margin:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+        .question h4{color:var(--bleu-fonce);margin-bottom:1rem}
+        .options label{display:block;padding:0.75rem 1rem;margin:0.5rem 0;background:var(--gris-fond);border-radius:8px;cursor:pointer;transition:all 0.2s}
+        .options label:hover{background:#e3f2fd}
+        .options input{margin-right:0.75rem}
+        .correct{background:#c8e6c9 !important;border-left:4px solid #4caf50}
+        .incorrect{background:#ffcdd2 !important;border-left:4px solid #f44336}
+        .explication{margin-top:1rem;padding:1rem;background:#e3f2fd;border-radius:8px;display:none}
+        .score-box{text-align:center;padding:2rem;background:linear-gradient(135deg,var(--bleu-gip),var(--bleu-fonce));color:white;border-radius:16px;margin:2rem 0}
+        .score-value{font-size:3rem;font-weight:700}
+    </style>
+
+  <style>
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;z-index:9999;padding:.6rem 1rem;background:#fff;color:#000;border-radius:.5rem;box-shadow:0 4px 18px rgba(0,0,0,.25);}
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+<header class="header-modern">
+<div class="header-content">
+<div class="logos-header">
+<img alt="RF" src="images/logo-republique.png"/>
+<img alt="FORPRO PACA" src="images/logoFORPROPaca.png"/>
+</div>
+<div class="header-title">
+<h1>Questionnaire TMS</h1>
+<p class="subtitle">Évaluation des connaissances</p>
+</div>
+</div>
+</header>
+<nav class="nav-bar">
+<div class="nav-pills-content">
+<a class="nav-pill" href="index.html">🏠 Accueil</a>
+<a class="nav-pill" href="cours/index-cours.html">📖 Cours</a>
+</div>
+</nav>
+<main class="container" id="main">
+<div class="content-bloc">
+<p>Répondez aux 10 questions puis cliquez sur "Valider" pour voir votre score.</p>
+</div>
+<form id="quiz">
+<div class="question" data-correct="c">
+<h4>1. Que signifie TMS ?</h4>
+<div class="options">
+<label><input name="q1" type="radio" value="a"/>Troubles Médicaux Sévères</label>
+<label><input name="q1" type="radio" value="b"/>Traumatismes Musculaires Standards</label>
+<label><input name="q1" type="radio" value="c"/>Troubles Musculo-Squelettiques</label>
+</div>
+<div class="explication">Les TMS (Troubles Musculo-Squelettiques) touchent les muscles, tendons et nerfs.</div>
+</div>
+<div class="question" data-correct="b">
+<h4>2. Quel pourcentage des maladies professionnelles représentent les TMS ?</h4>
+<div class="options">
+<label><input name="q2" type="radio" value="a"/>50%</label>
+<label><input name="q2" type="radio" value="b"/>87%</label>
+<label><input name="q2" type="radio" value="c"/>25%</label>
+</div>
+<div class="explication">Les TMS représentent 87% des maladies professionnelles reconnues en France.</div>
+</div>
+<div class="question" data-correct="a">
+<h4>3. Combien d'os compte le squelette adulte ?</h4>
+<div class="options">
+<label><input name="q3" type="radio" value="a"/>206</label>
+<label><input name="q3" type="radio" value="b"/>312</label>
+<label><input name="q3" type="radio" value="c"/>150</label>
+</div>
+<div class="explication">Le squelette adulte comprend 206 os.</div>
+</div>
+<div class="question" data-correct="c">
+<h4>4. Quelle région de la colonne vertébrale est la plus sollicitée lors du port de charges ?</h4>
+<div class="options">
+<label><input name="q4" type="radio" value="a"/>Cervicales</label>
+<label><input name="q4" type="radio" value="b"/>Dorsales</label>
+<label><input name="q4" type="radio" value="c"/>Lombaires</label>
+</div>
+<div class="explication">Les lombaires (L4-L5, L5-S1) supportent l'essentiel des contraintes lors du port de charges.</div>
+</div>
+<div class="question" data-correct="b">
+<h4>5. Que signifie DUERP ?</h4>
+<div class="options">
+<label><input name="q5" type="radio" value="a"/>Direction Unique des Équipements de Risque Professionnel</label>
+<label><input name="q5" type="radio" value="b"/>Document Unique d'Évaluation des Risques Professionnels</label>
+<label><input name="q5" type="radio" value="c"/>Dossier Universel d'Étude des Risques du Personnel</label>
+</div>
+<div class="explication">Le DUERP est obligatoire dès le 1er salarié et doit être conservé 40 ans.</div>
+</div>
+<div class="question" data-correct="a">
+<h4>6. Quelle est la formule de calcul de la criticité ?</h4>
+<div class="options">
+<label><input name="q6" type="radio" value="a"/>Gravité × Probabilité</label>
+<label><input name="q6" type="radio" value="b"/>Gravité + Probabilité</label>
+<label><input name="q6" type="radio" value="c"/>Gravité ÷ Probabilité</label>
+</div>
+<div class="explication">Criticité = G × P. Un score de 9 à 16 indique un risque critique.</div>
+</div>
+<div class="question" data-correct="c">
+<h4>7. Quelle est la limite réglementaire de port de charge pour un homme adulte ?</h4>
+<div class="options">
+<label><input name="q7" type="radio" value="a"/>25 kg</label>
+<label><input name="q7" type="radio" value="b"/>35 kg</label>
+<label><input name="q7" type="radio" value="c"/>55 kg</label>
+</div>
+<div class="explication">Maximum légal : 55 kg pour un homme, 25 kg pour une femme (Décret 92-958).</div>
+</div>
+<div class="question" data-correct="b">
+<h4>8. Quel geste est préférable pour déplacer une charge ?</h4>
+<div class="options">
+<label><input name="q8" type="radio" value="a"/>Tirer</label>
+<label><input name="q8" type="radio" value="b"/>Pousser</label>
+<label><input name="q8" type="radio" value="c"/>Porter à bout de bras</label>
+</div>
+<div class="explication">Pousser utilise la force des jambes et le poids du corps, moins sollicitant pour le dos.</div>
+</div>
+<div class="question" data-correct="a">
+<h4>9. Combien de principes généraux de prévention sont définis par le Code du travail ?</h4>
+<div class="options">
+<label><input name="q9" type="radio" value="a"/>9</label>
+<label><input name="q9" type="radio" value="b"/>5</label>
+<label><input name="q9" type="radio" value="c"/>12</label>
+</div>
+<div class="explication">L'article L.4121-2 définit 9 principes, dont "éviter les risques" et "adapter le travail à l'homme".</div>
+</div>
+<div class="question" data-correct="c">
+<h4>10. La ceinture lombaire prévient-elle les TMS ?</h4>
+<div class="options">
+<label><input name="q10" type="radio" value="a"/>Oui, elle protège efficacement le dos</label>
+<label><input name="q10" type="radio" value="b"/>Oui, elle est recommandée pour tous</label>
+<label><input name="q10" type="radio" value="c"/>Non, elle peut affaiblir la musculature</label>
+</div>
+<div class="explication">Les ceintures lombaires ne préviennent pas les TMS et peuvent être contre-productives.</div>
+</div>
+</form>
+<div style="text-align:center;margin:2rem 0">
+<button class="btn btn-primary" id="btnValider" onclick="valider()">✅ Valider mes réponses</button>
+<button class="btn btn-secondary" id="btnRecommencer" onclick="recommencer()" style="display:none">🔄 Recommencer</button>
+</div>
+<div id="resultat" style="display:none">
+<div class="score-box">
+<span class="score-value" id="score">0/10</span>
+<p id="appreciation">-</p>
+</div>
+</div>
+</main>
+<footer class="footer-modern">
+<div class="footer-content">
+<p class="footer-credit">© 2025 — <strong>Benoît Deflandre</strong> — GRETA GIP FIPAN</p>
+</div>
+</footer>
+<button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+        function valider(){
+            let score=0;
+            document.querySelectorAll('.question').forEach((q,i)=>{
+                const correct=q.dataset.correct;
+                const selected=document.querySelector(`input[name="q${i+1}"]:checked`);
+                q.querySelectorAll('label').forEach(l=>l.classList.remove('correct','incorrect'));
+                if(selected){
+                    if(selected.value===correct){
+                        score++;
+                        selected.parentElement.classList.add('correct');
+                    }else{
+                        selected.parentElement.classList.add('incorrect');
+                        q.querySelector(`input[value="${correct}"]`).parentElement.classList.add('correct');
+                    }
+                }else{
+                    q.querySelector(`input[value="${correct}"]`).parentElement.classList.add('correct');
+                }
+                q.querySelector('.explication').style.display='block';
+            });
+            document.getElementById('score').textContent=`${score}/10`;
+            let app='';
+            if(score>=8)app='🎉 Excellent ! Vous maîtrisez les fondamentaux.';
+            else if(score>=6)app='👍 Bien ! Quelques révisions sur les points manqués.';
+            else app='📚 À revoir. Consultez les modules de cours.';
+            document.getElementById('appreciation').textContent=app;
+            document.getElementById('resultat').style.display='block';
+            document.getElementById('btnValider').style.display='none';
+            document.getElementById('btnRecommencer').style.display='inline-flex';
+        }
+        function recommencer(){
+            document.querySelectorAll('input[type="radio"]').forEach(r=>r.checked=false);
+            document.querySelectorAll('label').forEach(l=>l.classList.remove('correct','incorrect'));
+            document.querySelectorAll('.explication').forEach(e=>e.style.display='none');
+            document.getElementById('resultat').style.display='none';
+            document.getElementById('btnValider').style.display='inline-flex';
+            document.getElementById('btnRecommencer').style.display='none';
+            window.scrollTo({top:0,behavior:'smooth'});
+        }
+    </script>
+</body>
+</html>
