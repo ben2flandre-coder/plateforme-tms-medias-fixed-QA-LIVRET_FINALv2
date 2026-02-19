@@ -1261,3 +1261,44 @@ a.button:hover,
 p {
   line-height: 1.6;
 }
+
+.video-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin: 24px 0;
+}
+
+.video-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+}
+
+.video-meta {
+  padding: 20px;
+}
+
+.btn-video {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: var(--brand-blue);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-video:hover {
+  opacity: 0.9;
+}
+
+
+.scroll-top-left{
+  right:auto !important;
+  left:24px;
+}
