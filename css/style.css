@@ -1273,33 +1273,8 @@ p {
 .video-thumb {
   width: 100%;
   aspect-ratio: 16/9;
-  position: relative;
-  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 55%, #42a5f5 100%);
-}
-
-.video-thumb::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 25%, rgba(255,255,255,0.2), transparent 45%),
-              radial-gradient(circle at 80% 75%, rgba(255,255,255,0.16), transparent 40%);
-}
-
-.video-thumb::after {
-  content: "▶";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 1.35rem;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.28);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+  background-size: cover;
+  background-position: center;
 }
 
 .video-meta {
@@ -1320,4 +1295,12 @@ p {
 
 .btn-video:hover {
   opacity: 0.9;
+}
+
+
+.scroll-top-left {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1000;
 }
