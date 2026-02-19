@@ -1141,3 +1141,123 @@ table tr:hover {
     margin-bottom: 2rem;
   }
 }
+/* =======================================================
+   PATCH FINAL STABILISÉ — TMS PREMIUM
+   Objectif : impact visuel + hiérarchie
+   Sans modification architecture
+   ======================================================= */
+
+:root {
+  --tms-elevation-soft: 0 6px 18px rgba(0, 32, 64, 0.08);
+  --tms-elevation-strong: 0 12px 32px rgba(0, 32, 64, 0.15);
+  --tms-stroke-soft: rgba(0, 32, 64, 0.08);
+}
+
+/* ================= HERO ================= */
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.05)
+  );
+  pointer-events: none;
+}
+
+h1 {
+  letter-spacing: -0.02em;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+h2 {
+  letter-spacing: -0.01em;
+}
+
+/* ================= CARTES ================= */
+
+.card,
+.box,
+.panel,
+.tile,
+.module,
+.section-card {
+  border: 1px solid var(--tms-stroke-soft);
+  border-radius: 16px;
+  box-shadow: var(--tms-elevation-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.box:hover,
+.panel:hover,
+.tile:hover,
+.module:hover,
+.section-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--tms-elevation-strong);
+}
+
+/* ================= IMAGES ================= */
+
+img {
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+/* ================= BOUTONS ================= */
+
+button,
+.btn,
+a.button,
+.cta {
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease;
+}
+
+button:hover,
+.btn:hover,
+a.button:hover,
+.cta:hover {
+  transform: translateY(-1px);
+}
+
+/* ================= RISQUE / CORRECTION ================= */
+
+.risk {
+  border-left: 4px solid #c62828;
+  background: rgba(198, 40, 40, 0.06);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.correction {
+  border-left: 4px solid #2e7d32;
+  background: rgba(46, 125, 50, 0.06);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ================= ESPACEMENTS ================= */
+
+.section {
+  margin-bottom: 48px;
+}
+
+.card + .card {
+  margin-top: 18px;
+}
+
+/* ================= CONTRASTE LÉGER ================= */
+
+p {
+  line-height: 1.6;
+}
