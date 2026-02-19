@@ -1,23 +1,26 @@
-# AUDIT FINAL YOUTUBE
+# AUDIT FINAL — PATCH GLOBAL STABLE
 
 ## Pages modifiées
-- `cours/module-a-introduction.html`
 - `cours/module-c-mecanismes.html`
-- `cours/module-f-prevention.html`
-- `cours/module-g-metiers.html`
-- `css/style.css`
+- `AUDIT_FINAL_YOUTUBE.md`
+- `AUDIT_TECHNIQUE_MEDIA.md`
 
-## Vidéos / iframes
-- iframes YouTube restantes dans le repo : **0**
-- iframes YouTube supprimées (total campagne) : **5**
-- remplacement stable : blocs `video-card` + `video-thumb` (miniature YouTube en `background-image`) + lien `watch?v=`
-- timecodes conservés quand présents (`&t=285s`, `&t=180s`)
+## Corrections appliquées
+### A) Vidéos YouTube (stabilité)
+- Vérification ciblée des modules A/C/F/G : aucune iframe YouTube restante.
+- Le module G est bien en remplacement stable (lien `watch?v=`), sans embed iframe.
 
-## Conformité binaire
-- **Aucun fichier binaire ajouté**
-- patch final : modifications uniquement sur fichiers texte (`.html`, `.css`, `.md`)
+### B) Schéma flèches (Module C)
+- Correction du sens des 3 flèches du schéma PAD pour un flux gauche → droite :
+  `Danger → Situation → Événement → Dommage`.
+- Correction faite par ajustement minimal des coordonnées des triangles (`<polygon>`), sans refonte du schéma.
 
-## Régression
-- **Aucune régression détectée** sur la structure des pages ciblées
-- bouton remonter droit conservé
-- bouton remonter gauche ajouté (`scroll-top-left`) et branché sur la même logique `window.scrollTo(...)`
+### C) Double bouton “remontée en haut”
+- Bouton droite conservé.
+- Bouton gauche `scroll-top-left` déjà présent et conservé (même comportement `window.scrollTo(...)`).
+
+## Comptage / conformité
+- iframes supprimées (campagne globale) : **5**
+- iframes YouTube restantes (repo) : **0**
+- fichiers binaires ajoutés : **0**
+- régression détectée : **aucune**

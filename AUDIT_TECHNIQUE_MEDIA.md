@@ -1,4 +1,4 @@
-# Audit technique média (patch final stable)
+# Audit technique média — patch final stable
 
 ## Périmètre contrôlé
 - `cours/module-a-introduction.html`
@@ -7,15 +7,15 @@
 - `cours/module-g-metiers.html`
 - `css/style.css`
 
-## Règles garanties
-- no iframe YouTube dans le repo
-- patch 100% code-only
-- aucun binaire ajouté
-- aucun chemin absolu local `/...` en `src/href/poster`
-- architecture du repo inchangée
+## Points validés
+- Aucune iframe YouTube restante.
+- Module G en lien YouTube stable (`watch?v=`), sans embed.
+- Module C : flèches du schéma PAD orientées gauche → droite après correction.
+- Double bouton de remontée : droite conservé + gauche (`scroll-top-left`) actif.
+- Aucun chemin absolu local `/...` en `src/href`.
+- Architecture inchangée, patch code-only.
 
-## Contrôles techniques exécutés
-- scan `iframe` : 0 occurrence
-- contrôle liens locaux : 0 manquant
-- contrôle chemins absolus locaux : 0
-- bouton droit remonter conservé + bouton gauche `scroll-top-left` ajouté
+## Conformité livraison
+- Modifications limitées aux fichiers texte (`.html`, `.css`, `.md`).
+- Aucun fichier binaire ajouté.
+- Compatible GitHub Pages.
