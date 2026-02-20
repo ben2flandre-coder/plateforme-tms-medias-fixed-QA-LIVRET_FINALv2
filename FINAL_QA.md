@@ -48,3 +48,8 @@
 ## Conclusion
 - PR #2 est **mergeable**.
 - Aucune régression détectée sur lecteurs A/F, neutralisation G, double scroll-top, PAD module C.
+
+
+## Vérification fichier "corps_humain_CAP_AEPE_illustre.html"
+- Recherche effectuée dans le repo: fichier **non présent** dans cette copie de travail.
+- Action appliquée à la page pertinente existante (`cours/module-b-corps-humain.html`): visuel squelette stabilisé via URL SVG publique + attributs `loading="lazy"` et `referrerpolicy="no-referrer"`.
