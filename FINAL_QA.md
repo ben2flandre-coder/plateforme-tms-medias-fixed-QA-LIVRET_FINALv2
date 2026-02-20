@@ -1,24 +1,35 @@
-# FINAL QA
+# FINAL QA — Checklist obligatoire
 
 ## Checklist (OK/KO)
 - [OK] Aucun marqueur de conflit (`<<<<<<<`, `=======`, `>>>>>>>`).
-- [OK] Aucun iframe dans `cours/module-g-metiers.html`.
-- [OK] Iframes Napo présentes dans `cours/module-a-introduction.html` + `cours/module-f-prevention.html`.
-- [OK] Bouton bas-gauche `scroll-top-left` présent sur toutes les pages HTML.
-- [OK] Aucun chemin absolu local (`src/href/poster` commençant par `/`).
-- [OK] Références locales HTML valides (`MISSING_LOCAL_REFS 0`).
-- [OK] Smoke test local HTTP 200 sur les pages demandées.
+- [OK] Module G: aucun iframe intégré problématique.
+- [OK] Module A + Module F: iframes Napo présentes (intégration restaurée).
+- [OK] Bouton `scroll-top-left` présent sur toutes les pages HTML.
+- [OK] Aucun chemin absolu local (`/`) dans `src|href|poster`.
+- [OK] Références locales HTML/CSS valides (0 manquant).
+- [OK] Smoke test local HTTP 200 sur les 5 pages exigées.
 
-## Preuves (extraits)
-- `rg -n "^<<<<<<<|^=======$|^>>>>>>>" --glob "**/*.{html,css,md}" || true` → 0
-- `rg -n "<iframe" cours/module-g-metiers.html || true` → 0
-- `rg -n "<iframe" cours/module-a-introduction.html cours/module-f-prevention.html` → 3 occurrences attendues (Napo)
-- Script Python présence bouton gauche: `MISSING_SCROLL_TOP_LEFT 0`
-- Script Python chemins absolus: `ABS_LOCAL_PATHS 0`
-- Script Python références locales: `MISSING_LOCAL_REFS 0`
-- Smoke test:
-  - `index.html` → `HTTP/1.0 200 OK`
-  - `cours/module-a-introduction.html` → `HTTP/1.0 200 OK`
-  - `cours/module-c-mecanismes.html` → `HTTP/1.0 200 OK`
-  - `cours/module-f-prevention.html` → `HTTP/1.0 200 OK`
-  - `cours/module-g-metiers.html` → `HTTP/1.0 200 OK`
+## Preuves (commandes exécutées)
+1. `rg -n "^<<<<<<<|^=======$|^>>>>>>>" --glob "**/*.{html,css,md}" || true`
+2. `rg -n "<iframe" cours/module-g-metiers.html || true`
+3. `rg -n "<iframe" cours/module-a-introduction.html cours/module-f-prevention.html`
+4. Script Python présence bouton gauche/droite sur toutes les pages HTML (`MISSING_LEFT 0`, `MISSING_RIGHT 0`)
+5. Script Python chemins absolus (`ABS_LOCAL_PATHS 0`)
+6. Script Python références locales (`MISSING_REFS 0`)
+7. `python -m http.server 4173` + `curl -I` sur:
+   - `index.html`
+   - `cours/module-a-introduction.html`
+   - `cours/module-c-mecanismes.html`
+   - `cours/module-f-prevention.html`
+   - `cours/module-g-metiers.html`
+   Résultat: `HTTP/1.0 200 OK` pour les 5 pages.
+
+## Vérification post-merge GitHub Pages
+- Merge PR vers `main`
+- Attendre le build GitHub Pages
+- Ouvrir le site puis faire **CTRL+F5**
+- Contrôler:
+  - module A: iframe Napo visible + lien fallback
+  - module F: 2 iframes Napo visibles + liens fallback
+  - module G: bloc ressource externe (pas d’iframe)
+  - bouton ↑ droite + bouton ↑ gauche sur toutes les pages
