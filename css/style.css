@@ -1288,6 +1288,8 @@ p {
   background: var(--brand-blue);
   color: #fff;
 
+  border-radius: 8px;
+
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s ease;
@@ -1298,5 +1300,9 @@ p {
 }
 
 
+
+.scroll-top-left{
+  right:auto !important;
+  left:24px;
 
 }
