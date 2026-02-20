@@ -1,35 +1,43 @@
-# FINAL QA — Checklist obligatoire
+# FINAL QA — PR #2 Conflict Resolution + Stabilisation
 
-## Checklist (OK/KO)
-- [OK] Aucun marqueur de conflit (`<<<<<<<`, `=======`, `>>>>>>>`).
-- [OK] Module G: aucun iframe intégré problématique.
-- [OK] Module A + Module F: iframes Napo présentes (intégration restaurée).
-- [OK] Bouton `scroll-top-left` présent sur toutes les pages HTML.
-- [OK] Aucun chemin absolu local (`/`) dans `src|href|poster`.
-- [OK] Références locales HTML/CSS valides (0 manquant).
-- [OK] Smoke test local HTTP 200 sur les 5 pages exigées.
+## Ce qui a été gardé / retiré
+- **Gardé**
+  - Module A: iframe Napo intégrée (`youtube-nocookie`) + lien fallback YouTube.
+  - Module F: 2 iframes Napo intégrées (`start=285` et `start=180`) + liens fallback.
+  - Double boutons scroll-top (droite existant + gauche `scroll-top-left`) sur toutes les pages.
+  - Flèches PAD module C dans le sens gauche → droite.
+- **Retiré / non remis**
+  - Module G: aucun iframe intégré pour la vidéo aide-soignant (bloc ressource externe uniquement).
+  - Aucune variante concurrente `video-thumb` en `background-image` dans A/F.
 
-## Preuves (commandes exécutées)
-1. `rg -n "^<<<<<<<|^=======$|^>>>>>>>" --glob "**/*.{html,css,md}" || true`
-2. `rg -n "<iframe" cours/module-g-metiers.html || true`
-3. `rg -n "<iframe" cours/module-a-introduction.html cours/module-f-prevention.html`
-4. Script Python présence bouton gauche/droite sur toutes les pages HTML (`MISSING_LEFT 0`, `MISSING_RIGHT 0`)
-5. Script Python chemins absolus (`ABS_LOCAL_PATHS 0`)
-6. Script Python références locales (`MISSING_REFS 0`)
-7. `python -m http.server 4173` + `curl -I` sur:
-   - `index.html`
-   - `cours/module-a-introduction.html`
-   - `cours/module-c-mecanismes.html`
-   - `cours/module-f-prevention.html`
-   - `cours/module-g-metiers.html`
-   Résultat: `HTTP/1.0 200 OK` pour les 5 pages.
+## Checklist de validation
+- [OK] Aucune trace de conflit active dans HTML/CSS (`^<<<<<<<|^=======$|^>>>>>>>`).
+- [OK] Iframes restantes limitées aux vidéos Napo de A/F.
+- [OK] Module G sans iframe (lien externe propre).
+- [OK] Double bouton scroll-top présent partout.
+- [OK] Smoke HTTP local OK sur A/F/G.
 
-## Vérification post-merge GitHub Pages
-- Merge PR vers `main`
-- Attendre le build GitHub Pages
-- Ouvrir le site puis faire **CTRL+F5**
-- Contrôler:
-  - module A: iframe Napo visible + lien fallback
-  - module F: 2 iframes Napo visibles + liens fallback
-  - module G: bloc ressource externe (pas d’iframe)
-  - bouton ↑ droite + bouton ↑ gauche sur toutes les pages
+## Preuves (commandes + résultats)
+1. Conflits
+   - Commande demandée: `rg -n "<<<<<<|=======|>>>>>>" .`
+   - Résultat: remonte des séparateurs décoratifs (`=======`) dans commentaires/markdown, **pas** des marqueurs de conflit actifs.
+   - Commande stricte utilisée pour conflit réel: `rg -n "^<<<<<<<|^=======$|^>>>>>>>" -g"*.html" -g"*.css" . || true`
+   - Résultat: **0 occurrence**.
+
+2. Iframes
+   - `rg -n "<iframe" cours/*.html`
+   - Résultat:
+     - `cours/module-a-introduction.html` (1 iframe Napo)
+     - `cours/module-f-prevention.html` (2 iframes Napo)
+     - **aucune** iframe en `cours/module-g-metiers.html`
+
+3. Boutons scroll-top gauche/droite
+   - Script vérification globale pages HTML
+   - Résultat: `MISSING_DOUBLE_BUTTON 0`
+
+4. Smoke test local
+   - `python -m http.server 4173`
+   - `curl -I` sur:
+     - `cours/module-a-introduction.html` → `HTTP/1.0 200 OK`
+     - `cours/module-f-prevention.html` → `HTTP/1.0 200 OK`
+     - `cours/module-g-metiers.html` → `HTTP/1.0 200 OK`
