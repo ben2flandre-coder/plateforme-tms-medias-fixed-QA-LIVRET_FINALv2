@@ -72,6 +72,40 @@ curl -sI http://127.0.0.1:4173/cours/module-g-metiers.html
 ```
 Résultat: `HTTP/1.0 200 OK` sur toutes les pages testées.
 
+
+
+### F) Vérification structure HTML (équilibre balises)
+```bash
+python - <<'PY'
+from pathlib import Path
+import re
+issues=[]
+for p in sorted(Path('cours').glob('*.html')):
+    t=p.read_text(encoding='utf-8',errors='ignore')
+    if len(re.findall(r'<div\b',t,re.I)) != len(re.findall(r'</div>',t,re.I)):
+        issues.append(p.name)
+print('DIV_BALANCE_ISSUES', len(issues))
+PY
+```
+Résultat: `DIV_BALANCE_ISSUES 0`.
+
+### G) Unicité pattern scroll-top (cours/*.html)
+```bash
+python - <<'PY'
+from pathlib import Path
+import re
+issues=[]
+for p in sorted(Path('cours').glob('*.html')):
+    t=p.read_text(encoding='utf-8',errors='ignore')
+    btn_all=len(re.findall(r'class="btn-top(?: scroll-top-left)?"',t))
+    left=len(re.findall(r'class="btn-top scroll-top-left"',t))
+    if btn_all!=2 or left!=1:
+        issues.append((p.name,btn_all,left))
+print('SCROLL_BUTTON_PATTERN_ISSUES', len(issues))
+PY
+```
+Résultat: `SCROLL_BUTTON_PATTERN_ISSUES 0`.
+
 ## Fichiers modifiés
 - `cours/module-b-corps-humain.html`
 - `cours/module-a-introduction.html` (déjà conforme, inchangé dans ce passage)
