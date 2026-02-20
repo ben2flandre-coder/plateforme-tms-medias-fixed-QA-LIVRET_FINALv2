@@ -5,6 +5,7 @@
 - Module F: 2 lecteurs intégrés Napo (`zSXu_X0-DzE?start=285` et `zSXu_X0-DzE?start=180`) + liens fallback.
 - Module G: **pas d’iframe** (ressource externe propre uniquement).
 - Module C: flèches PAD conservées dans le bon sens (gauche → droite).
+- Module B: illustration squelette remplacée par un SVG inline (plus de dépendance externe).
 - Navigation: double bouton scroll-top sur toutes les pages (droite existant + gauche `scroll-top-left`).
 
 ## Vérifications obligatoires (preuves)
@@ -26,18 +27,18 @@
 
 4) Présence des deux boutons scroll-top sur toutes les pages
 - Script Python: scan de tous les `*.html` pour `btn-top` et `scroll-top-left`.
-- Résultat: `TOTAL_HTML 20` et `MISSING_DOUBLE_BUTTON 0`.
+- Résultat: `TOTAL_HTML 21` et `MISSING_DOUBLE_BUTTON 0`.
 
 5) Liens locaux (ressources internes)
 - Script Python: validation `src/href/url(...)` relatifs.
-- Résultat: `CHECKED_LOCAL_REFS 180` et `MISSING_LOCAL 0`.
+- Résultat: `CHECKED_LOCAL_REFS 182` et `MISSING_LOCAL 0`.
 
 6) Smoke test local
 - Commandes:
   - `python -m http.server 4173`
-  - `curl -sI` sur `index.html`, `cours/module-a-introduction.html`, `cours/module-c-mecanismes.html`, `cours/module-f-prevention.html`, `cours/module-g-metiers.html`
-- Résultat: `HTTP/1.0 200 OK` sur les 5 pages.
+  - `curl -sI` sur `index.html`, `index-cours.html`, `cours/module-a-introduction.html`, `cours/module-c-mecanismes.html`, `cours/module-f-prevention.html`, `cours/module-g-metiers.html`
+- Résultat: `HTTP/1.0 200 OK` sur les pages testées.
 
 ## Vérification fichier "corps_humain_CAP_AEPE_illustre.html"
-- Recherche dans le repo: fichier **non présent** (`rg --files -g '*corps*humain*'` retourne uniquement `cours/module-b-corps-humain.html`).
-- Aucune correction de logos possible sur le fichier demandé absent dans cette copie.
+- Recherche dans le repo: fichier **non présent** (`rg --files -g '*corps*humain*'` retourne `cours/module-b-corps-humain.html`).
+- Correctif appliqué sur la page existante pertinente: `cours/module-b-corps-humain.html` utilise désormais un SVG inline pour le squelette (pas d'URL externe cassable).
