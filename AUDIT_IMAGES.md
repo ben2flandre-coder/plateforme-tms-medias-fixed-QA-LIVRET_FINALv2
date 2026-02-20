@@ -1,6 +1,6 @@
 # AUDIT IMAGES
 
-Reference | Page source | Chemin résolu | Existe? | Action
+Référence trouvée | Page source | Chemin résolu | Existe? | Action
 ---|---|---|---|---
 `images/logo-republique.png` | `calculateur-criticite.html` | `images/logo-republique.png` | Y | KEEP
 `images/logoFORPROPaca.png` | `calculateur-criticite.html` | `images/logoFORPROPaca.png` | Y | KEEP
@@ -10,7 +10,7 @@ Reference | Page source | Chemin résolu | Existe? | Action
 `../images/logoFORPROPaca.png` | `cours/module-a-introduction.html` | `images/logoFORPROPaca.png` | Y | KEEP
 `../images/logo-republique.png` | `cours/module-b-corps-humain.html` | `images/logo-republique.png` | Y | KEEP
 `../images/logoFORPROPaca.png` | `cours/module-b-corps-humain.html` | `images/logoFORPROPaca.png` | Y | KEEP
-`https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Human_skeleton_front_fr.svg/400px-Human_skeleton_front_fr.svg.png` | `cours/module-b-corps-humain.html` | `https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Human_skeleton_front_fr.svg/400px-Human_skeleton_front_fr.svg.png` | EXTERNAL | Y
+`https://upload.wikimedia.org/wikipedia/commons/1/17/Human_skeleton_front_fr.svg` | `cours/module-b-corps-humain.html` | `https://upload.wikimedia.org/wikipedia/commons/1/17/Human_skeleton_front_fr.svg` | Y | KEEP_EXTERNAL
 `../images/logo-republique.png` | `cours/module-c-mecanismes.html` | `images/logo-republique.png` | Y | KEEP
 `../images/logoFORPROPaca.png` | `cours/module-c-mecanismes.html` | `images/logoFORPROPaca.png` | Y | KEEP
 `../images/logo-republique.png` | `cours/module-d-reglementation.html` | `images/logo-republique.png` | Y | KEEP

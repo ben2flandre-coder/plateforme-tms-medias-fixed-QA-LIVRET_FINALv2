@@ -47,6 +47,6 @@ Page | Vidéo | Type | URL | Statut | Action
 `videotheque-tms.html` | `channel` | `link` | `https://www.youtube.com/@INRSFrance` | LINK_OK | KEEP
 
 ## Preuves de scan
-- `rg -n "<iframe" cours/*.html`
-- `rg -n "img src=" cours/*.html`
-- `rg -n "url\(" css/*.css`
+- `grep -R "<iframe" -n cours/*.html`
+- `grep -R "img src=" -n cours/*.html`
+- `grep -R "url(" -n css/*.css`
