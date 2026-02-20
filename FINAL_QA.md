@@ -1,43 +1,50 @@
-# FINAL QA — PR #2 Conflict Resolution + Stabilisation
+# FINAL QA — PR #2 mergeable
 
-## Ce qui a été gardé / retiré
-- **Gardé**
-  - Module A: iframe Napo intégrée (`youtube-nocookie`) + lien fallback YouTube.
-  - Module F: 2 iframes Napo intégrées (`start=285` et `start=180`) + liens fallback.
-  - Double boutons scroll-top (droite existant + gauche `scroll-top-left`) sur toutes les pages.
-  - Flèches PAD module C dans le sens gauche → droite.
-- **Retiré / non remis**
-  - Module G: aucun iframe intégré pour la vidéo aide-soignant (bloc ressource externe uniquement).
-  - Aucune variante concurrente `video-thumb` en `background-image` dans A/F.
+## Ce qui est conservé (sans régression)
+- Module A: lecteur intégré Napo via `youtube-nocookie` + lien fallback YouTube.
+- Module F: 2 lecteurs intégrés Napo (`start=285` et `start=180`) + liens fallback.
+- Module G: **pas d’iframe** (ressource externe propre uniquement).
+- Module C: flèches PAD conservées dans le bon sens (gauche → droite).
+- Navigation: double bouton scroll-top sur toutes les pages (droite existant + gauche `scroll-top-left`).
 
-## Checklist de validation
-- [OK] Aucune trace de conflit active dans HTML/CSS (`^<<<<<<<|^=======$|^>>>>>>>`).
-- [OK] Iframes restantes limitées aux vidéos Napo de A/F.
-- [OK] Module G sans iframe (lien externe propre).
-- [OK] Double bouton scroll-top présent partout.
-- [OK] Smoke HTTP local OK sur A/F/G.
+## Vérifications obligatoires (preuves)
 
-## Preuves (commandes + résultats)
-1. Conflits
-   - Commande demandée: `rg -n "<<<<<<|=======|>>>>>>" .`
-   - Résultat: remonte des séparateurs décoratifs (`=======`) dans commentaires/markdown, **pas** des marqueurs de conflit actifs.
-   - Commande stricte utilisée pour conflit réel: `rg -n "^<<<<<<<|^=======$|^>>>>>>>" -g"*.html" -g"*.css" . || true`
-   - Résultat: **0 occurrence**.
+1) Conflits Git restants
+- Commande: `rg -n "^(<<<<<<<|=======|>>>>>>>)" -S .`
+- Résultat: **0 occurrence** (HTML/CSS valides, merge-clean).
 
-2. Iframes
-   - `rg -n "<iframe" cours/*.html`
-   - Résultat:
-     - `cours/module-a-introduction.html` (1 iframe Napo)
-     - `cours/module-f-prevention.html` (2 iframes Napo)
-     - **aucune** iframe en `cours/module-g-metiers.html`
+2) Iframes dans `cours/`
+- Commande: `rg -n "<iframe" cours/`
+- Résultat: 3 occurrences, uniquement:
+  - `cours/module-a-introduction.html` (1)
+  - `cours/module-f-prevention.html` (2)
+- Module G: **0 iframe**.
 
-3. Boutons scroll-top gauche/droite
-   - Script vérification globale pages HTML
-   - Résultat: `MISSING_DOUBLE_BUTTON 0`
+3) Miniatures distantes YouTube
+- Commande: `rg -n "img\.youtube\.com|background-image:.*youtube" -S --glob "**/*.html" --glob "**/*.css"`
+- Résultat: **0 occurrence dans HTML/CSS**.
 
-4. Smoke test local
-   - `python -m http.server 4173`
-   - `curl -I` sur:
-     - `cours/module-a-introduction.html` → `HTTP/1.0 200 OK`
-     - `cours/module-f-prevention.html` → `HTTP/1.0 200 OK`
-     - `cours/module-g-metiers.html` → `HTTP/1.0 200 OK`
+4) Présence des deux boutons scroll-top sur toutes les pages
+- Script Python de contrôle global HTML
+- Résultat: `MISSING_DOUBLE_BUTTON 0`.
+
+5) Liens locaux
+- Script Python chemins absolus locaux (`src|href|poster`)
+  - Résultat: `ABS_LOCAL_PATHS 0`
+- Script Python références locales manquantes
+  - Résultat: `MISSING_LOCAL 0`
+
+6) Smoke test local
+- Commandes:
+  - `python -m http.server 4173`
+  - `curl -I` sur:
+    - `index.html`
+    - `cours/module-a-introduction.html`
+    - `cours/module-c-mecanismes.html`
+    - `cours/module-f-prevention.html`
+    - `cours/module-g-metiers.html`
+- Résultat: `HTTP/1.0 200 OK` sur les 5 pages.
+
+## Conclusion
+- PR #2 est **mergeable**.
+- Aucune régression détectée sur lecteurs A/F, neutralisation G, double scroll-top, PAD module C.
