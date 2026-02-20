@@ -1287,7 +1287,9 @@ p {
   padding: 10px 16px;
   background: var(--brand-blue);
   color: #fff;
+
   border-radius: 8px;
+
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s ease;
@@ -1298,18 +1300,9 @@ p {
 }
 
 
-.scroll-top-left {
+
+.scroll-top-left{
   right:auto !important;
   left:24px;
-}
 
-
-.scroll-top{
-  right: 2rem;
-  left: auto !important;
-}
-
-.scroll-top-right{
-  right: 2rem;
-  left: auto !important;
 }
