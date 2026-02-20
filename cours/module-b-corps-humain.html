@@ -18,8 +18,8 @@
 <header class="header-modern">
 <div class="header-content">
 <div class="logos-header">
-<img alt="République Française" src="../images/logo-republique.png"/>
-<img alt="FORPRO PACA" src="../images/logoFORPROPaca.png"/>
+<img alt="République Française" loading="lazy" src="../images/logo-republique.png"/>
+<img alt="FORPRO PACA" loading="lazy" src="../images/logoFORPROPaca.png"/>
 </div>
 <div class="header-title">
 <h1>Module B — Le Corps Humain</h1>
@@ -114,10 +114,11 @@
 </div>
 </div>
 <div>
-<figure>
-<img alt="Squelette humain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Human_skeleton_front_fr.svg/400px-Human_skeleton_front_fr.svg.png" style="max-height: 400px;"/>
-<figcaption>Le squelette humain - Vue antérieure</figcaption>
-</figure>
+<div class="video-card" style="padding: 1rem; margin:0;">
+<h4>Explorer le squelette en 3D</h4>
+<p>Ressource interactive (site externe).</p>
+<a class="btn-video" href="https://www.visiblebody.com/fr/learn/skeleton/overview-of-skeleton" rel="noopener" target="_blank">Explorer le squelette en 3D (Visible Body)</a>
+</div>
 </div>
 </div>
 <div class="note-metier">
@@ -199,6 +200,26 @@
 <li><strong>Anneau fibreux</strong> (périphérie) : structure solide qui contient le noyau</li>
 <li><strong>Noyau pulpeux</strong> (centre) : gel qui absorbe les chocs et répartit les pressions</li>
 </ul>
+<div class="grid-2" style="align-items:center; gap:1rem; margin:1rem 0;">
+<div>
+<figure>
+<svg aria-label="Schéma simplifié d'un disque intervertébral" role="img" style="max-width: 260px; width: 100%; margin: 0 auto; display:block;" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+<circle cx="110" cy="110" r="92" fill="#ffe0e0" stroke="#c62828" stroke-width="4"/>
+<circle cx="110" cy="110" r="58" fill="#fff3e0" stroke="#ef6c00" stroke-width="4"/>
+<circle cx="110" cy="110" r="24" fill="#fffde7" stroke="#f9a825" stroke-width="3"/>
+<text x="110" y="36" text-anchor="middle" font-size="12" fill="#c62828">Anneau fibreux</text>
+<text x="110" y="111" text-anchor="middle" font-size="12" fill="#ef6c00">Noyau pulpeux</text>
+<text x="110" y="198" text-anchor="middle" font-size="11" fill="#555">Amortisseur de pression</text>
+</svg>
+<figcaption>Disque intervertébral (schéma simplifié)</figcaption>
+</figure>
+</div>
+<div class="alert alert-info" style="margin:0;">
+<strong>Rappel :</strong> le disque répartit les charges entre les vertèbres.
+En flexion avec charge, la pression augmente fortement sur la partie postérieure.
+</div>
+</div>
+
 <div class="alert alert-danger">
 <strong>⚠ Hernie discale :</strong> Lorsque l'anneau fibreux se fissure, le noyau pulpeux peut sortir 
                 et comprimer les racines nerveuses → douleur intense (sciatique, cruralgie).
@@ -236,6 +257,19 @@
 <li><strong>Contraction excentrique</strong> : le muscle s'allonge en freinant (descendre une charge)</li>
 <li><strong>Contraction isométrique</strong> : le muscle travaille sans mouvement (maintien de posture)</li>
 </ul>
+<figure style="margin: 1rem 0;">
+<svg aria-label="Chaîne musculaire du dos et des membres" role="img" style="max-width: 360px; width: 100%; margin: 0 auto; display:block;" viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+<rect x="15" y="20" width="270" height="180" rx="14" fill="#f3f8ff"/>
+<path d="M150 40 L150 175" stroke="#2d5f8b" stroke-width="6"/>
+<ellipse cx="150" cy="34" rx="18" ry="14" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3"/>
+<path d="M90 80 Q150 60 210 80" stroke="#c62828" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M100 120 Q150 96 200 120" stroke="#ef6c00" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M110 160 Q150 142 190 160" stroke="#f9a825" stroke-width="10" fill="none" stroke-linecap="round"/>
+<text x="150" y="205" text-anchor="middle" font-size="12" fill="#555">Grandes chaînes musculaires sollicitées en manutention</text>
+</svg>
+<figcaption>Visualisation simplifiée des groupes musculaires mobilisés</figcaption>
+</figure>
+
 <div class="alert alert-warning">
 <strong>⚠ Fatigue musculaire :</strong> Les contractions statiques prolongées (maintien de posture) 
                 sont plus fatigantes que les contractions dynamiques car elles réduisent l'apport sanguin au muscle.
@@ -376,7 +410,7 @@
 <div class="footer-content">
 <div class="footer-nav">
 <a href="module-a-introduction.html">← Module A — Introduction</a>
-<a href="index-cours.html">↑ Sommaire</a>
+<a href="index-cours.html">Sommaire</a>
 <a href="module-c-mecanismes.html">Module C — Mécanismes →</a>
 </div>
 <p class="footer-credit">
@@ -384,6 +418,7 @@
             </p>
 </div>
 </footer>
-<button class="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Retour en haut">↑</button>
+<button class="btn-top scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Retour en haut">↑</button>
+<button class="btn-top scroll-top-left" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Retour en haut">↑</button>
 </body>
 </html>
