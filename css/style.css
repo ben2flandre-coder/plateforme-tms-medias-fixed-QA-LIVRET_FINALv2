@@ -1261,3 +1261,67 @@ a.button:hover,
 p {
   line-height: 1.6;
 }
+
+.video-card {
+  max-width: 720px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f7fa;
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+}
+
+.video-card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.video-source {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.btn-video {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: var(--brand-blue);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-video:hover {
+  opacity: 0.9;
+}
+
+.scroll-top-left {
+  right:auto !important;
+  left:24px;
+}
+
+
+.scroll-top{
+  right: 2rem;
+  left: auto !important;
+}
+
+.scroll-top-right{
+  right: 2rem;
+  left: auto !important;
+}
+
+
+.video-card{max-width:900px;margin:1.5rem auto;border-radius:14px;overflow:hidden;background:#f5f7fa;border:1px solid rgba(0,0,0,.08)}
+.video-card img{width:100%;display:block}
+.video-card-body{padding:1rem 1.25rem;text-align:left}
+.video-title{margin:0 0 .25rem 0}
+.video-desc{margin:.25rem 0 .75rem 0;opacity:.9}
+.video-cta{display:inline-block;margin:.25rem 0;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:700}
+.video-source{font-size:.9rem;opacity:.75;margin:.5rem 0 0}
