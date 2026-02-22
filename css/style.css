@@ -1338,18 +1338,3 @@ p {
   width: 100%;
   height: auto;
 }
-
-
-
-
-
-
-.ressource-video{
-  background:#fff;
-  border-radius:16px;
-  padding:1rem 1.1rem;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  border:1px solid rgba(0,0,0,.06);
-}
-.ressource-video h4{ margin:.1rem 0 .35rem; }
-.ressource-video p{ margin:0 0 .75rem; opacity:.9; }
