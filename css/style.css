@@ -1324,3 +1324,18 @@ p {
   left:24px;
 
 }
+.anatomie-card {
+  text-align:center;
+  margin:2rem auto;
+}
+
+.img-anatomie{
+  max-width:420px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
+}
+
+.image-caption{
+  font-size:.9rem;
+  margin-top:.6rem;
+}
