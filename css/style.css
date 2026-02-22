@@ -1281,20 +1281,12 @@ p {
   padding: 20px;
 }
 
-.btn-video {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 16px;
-  background: var(--brand-blue);
-  color: #fff;
-
-
-  border-radius: 8px;
-
-
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.2s ease;
+.btn-video{
+  display:inline-block;
+  padding:.6rem .9rem;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
 }
 
 .btn-video:hover {
@@ -1304,38 +1296,60 @@ p {
 
 
 .scroll-top-left {
-  right:auto !important;
-  left:24px;
+  right: auto !important;
+  left: 24px;
 }
 
-
-.scroll-top{
+.scroll-top {
   right: 2rem;
   left: auto !important;
 }
 
-.scroll-top-right{
+.scroll-top-right {
   right: 2rem;
   left: auto !important;
-
-
-.scroll-top-left{
-  right:auto !important;
-  left:24px;
-
 }
-.anatomie-card {
+
+.anatomie-card{
   text-align:center;
-  margin:2rem auto;
+  margin:1.5rem auto;
 }
-
+.anatomie-card a{ text-decoration:none; }
 .img-anatomie{
-  max-width:420px;
+  display:block;
+  max-width:520px;
+  width:100%;
+  height:auto;
+  margin:0 auto;
   border-radius:12px;
   box-shadow:0 6px 18px rgba(0,0,0,.15);
 }
-
 .image-caption{
-  font-size:.9rem;
+  font-size:.95rem;
   margin-top:.6rem;
 }
+.caption-muted{
+  opacity:.75;
+  font-size:.85rem;
+}
+
+.video-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+.ressource-video{
+  background:#fff;
+  border-radius:16px;
+  padding:1rem 1.1rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  border:1px solid rgba(0,0,0,.06);
+}
+.ressource-video h4{ margin:.1rem 0 .35rem; }
+.ressource-video p{ margin:0 0 .75rem; opacity:.9; }
