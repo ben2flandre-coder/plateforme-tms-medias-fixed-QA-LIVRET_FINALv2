@@ -1304,38 +1304,55 @@ p {
 
 
 .scroll-top-left {
-  right:auto !important;
-  left:24px;
+  right: auto !important;
+  left: 24px;
 }
 
-
-.scroll-top{
+.scroll-top {
   right: 2rem;
   left: auto !important;
 }
 
-.scroll-top-right{
+.scroll-top-right {
   right: 2rem;
   left: auto !important;
-
-
-.scroll-top-left{
-  right:auto !important;
-  left:24px;
-
 }
-.anatomie-card {
+
+.anatomie-card{
   text-align:center;
-  margin:2rem auto;
+  margin:1.5rem auto;
 }
-
+.anatomie-card a{ text-decoration:none; }
 .img-anatomie{
-  max-width:420px;
+  display:block;
+  max-width:520px;
+  width:100%;
+  height:auto;
+  margin:0 auto;
   border-radius:12px;
   box-shadow:0 6px 18px rgba(0,0,0,.15);
 }
-
 .image-caption{
-  font-size:.9rem;
+  font-size:.95rem;
   margin-top:.6rem;
+}
+.caption-muted{
+  opacity:.75;
+  font-size:.85rem;
+}
+
+.video-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.ressource-video{
+  background:#f5f7fb;
+  padding:1.2rem;
+  border-radius:12px;
+  margin:1rem 0 1.5rem;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
 }
