@@ -1346,10 +1346,3 @@ p {
   width: 100%;
   height: auto;
 }
-
-.video-card { position: relative; }
-.video-card a { position: relative; z-index: 5; display: block; }
-.video-card::before,
-.video-card::after { pointer-events: none; }
-.video-card .play-button,
-.video-card .play-button * { pointer-events: none; }
