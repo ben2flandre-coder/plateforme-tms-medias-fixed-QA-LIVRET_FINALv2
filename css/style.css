@@ -1338,3 +1338,8 @@ p {
   width: 100%;
   height: auto;
 }
+.video-card { position: relative; }
+.video-card a { position: relative; z-index: 5; display: block; }
+.video-card .play-button,
+.video-card a::before,
+.video-card a::after { pointer-events: none; }
